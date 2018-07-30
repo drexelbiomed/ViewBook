@@ -34,7 +34,7 @@ struct Video: Codable {
     
     func embed(completion: @escaping (String) -> Void) {
         let embedUrl: String
-        embedUrl = "https://www.youtube.com/embed/\(self.id)?playsinline=1"
+        embedUrl = "https://www.youtube.com/embed/\(self.id)?playsinline=1&showinfo=0&rel=0"
         completion(embedUrl)
     }
     

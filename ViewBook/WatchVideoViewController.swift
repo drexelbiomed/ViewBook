@@ -13,34 +13,47 @@ class WatchVideoViewController: UIViewController, WKUIDelegate {
 
     @IBOutlet weak var titleLabel: UILabel!
     @IBOutlet weak var viewForEmbeddingWebView: UIView!
+    @IBOutlet weak var imageView: UIImageView!
     
-    var webView: WKWebView!
-    var videoId: String?
     var thisVideo: Video?
+    var videoId: String?
     var videoEmbedString: String?
+    var videoImageData: UIImage?
+    var webView: WKWebView!
+
     
     override func loadView() {
         super.loadView()
-        webView = WKWebView(frame: viewForEmbeddingWebView.bounds, configuration: WKWebViewConfiguration())
+        let wkConfig = WKWebViewConfiguration()
+        wkConfig.allowsInlineMediaPlayback = true
+        webView = WKWebView(frame: viewForEmbeddingWebView.bounds, configuration: wkConfig)
         webView.uiDelegate = self
+        webView.navigationDelegate = self
+        webView.autoresizingMask = [UIViewAutoresizing.flexibleWidth, UIViewAutoresizing.flexibleHeight]
         self.viewForEmbeddingWebView.addSubview(webView)
     }
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
         // Do any additional setup after loading the view.
         if let video = thisVideo {
             titleLabel.text = video.title
             videoId = video.id
+            video.image { (image) in
+                self.imageView.image = image
+            }
+            
             video.embed { (url) in
                 self.videoEmbedString = url
-                print(url)
             }
             
             if let url = URL(string: videoEmbedString!) {
                 let myRequest = URLRequest(url: url)
                 self.webView.load(myRequest)
-                print("Got here")
+                if self.webView.isLoading == true {
+                    viewForEmbeddingWebView.alpha = 0
+                }
             }
         }
     }
@@ -50,7 +63,7 @@ class WatchVideoViewController: UIViewController, WKUIDelegate {
         // Dispose of any resources that can be recreated.
     }
     
-
+    
     /*
     // MARK: - Navigation
 
@@ -61,4 +74,13 @@ class WatchVideoViewController: UIViewController, WKUIDelegate {
     }
     */
 
+}
+
+extension WatchVideoViewController: WKNavigationDelegate {
+    func webView(_ webView: WKWebView, didFinish navigation: WKNavigation!) {
+        if self.webView.isLoading == false {
+            viewForEmbeddingWebView.alpha = 1
+            imageView.alpha = 0
+        }
+    }
 }
