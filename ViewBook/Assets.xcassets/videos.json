@@ -1,0 +1,525 @@
+
+<!doctype html>
+
+<!--[if lt IE 7]> <html class="no-js lt-ie9 lt-ie8 lt-ie7" lang="en"> <![endif]-->
+<!--[if IE 7]>    <html class="no-js lt-ie9 lt-ie8" lang="en"> <![endif]-->
+<!--[if IE 8]>    <html class="no-js lt-ie9" lang="en"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en"> <!--<![endif]-->
+<head>
+    <!--imports mobile starting point, base styles, libraries, resets-->
+  <link rel="stylesheet" href="/~/stylesheets/biomed/home/overlay-biomed/mobile/?hash=dc3218dd6738a06178d6c7f022f1fdd2">
+
+
+  <!--720 for (ipad-y)screens-->
+  <!--[if gte IE 9]><!-->
+  <style type="text/css" media="all and (min-width: 740px) and (min-device-width: 740px), (max-device-width: 800px) and (min-width: 740px) and (orientation:landscape)">@import url("/~/stylesheets/biomed/home/overlay-biomed/portrait/?hash=733db4d8edb69afecd818b36ed7d2488");</style>
+  <!--<![endif]-->
+
+
+  <!--default non-mobile layout for legacy-->
+  <!--[if (lt IE 9)&(!IEMobile)]>
+  <style type="text/css" media="all">@import url("/~/stylesheets/biomed/home/overlay-biomed/landscape/?hash=28915e8dddf50a223a44353099d0fc17");</style>
+  <![endif]-->
+
+  <!--960 for appropriate screens. Bumped out 20 to accomodate design-->
+  <!--[if gte IE 9]><!-->
+  <style type="text/css" media="all and (min-width: 1020px) and (min-device-width: 1020px), all and (max-device-width: 1024px) and (min-width: 1024px) and (orientation:landscape)">@import url("/~/stylesheets/biomed/home/overlay-biomed/landscape/?hash=28915e8dddf50a223a44353099d0fc17");</style>
+  <!--<![endif]-->
+
+
+    <!--imports mobile starting point, base styles, libraries, resets-->
+  <link rel="stylesheet" href="/~/stylesheets/component/pagenotfound/mobile/?hash=c6335aea589a6e9093cca4ad7519ab80">
+
+
+
+  <meta id="ctl01" http-equiv="X-UA-Compatible" content="IE=8,9,10" /><meta id="ctl02" charset="utf-8" /><meta id="ctl03" name="viewport" content="width=device-width, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no" /> <!-- disable zooming -->
+    <title>
+  School of Biomedical Engineering, Science and Health Systems | Drexel BME
+</title><link id="ctl05" rel="shortcut icon" href="/~/media/Images/core/FavIcon.ashx" /><link id="lkCanonical" rel="canonical" href="http://drexel.edu/biomed/" /><meta id="metaKeywords" name="KEYWORDS" content="Undergraduate Programs, Graduate Programs, Research, Bioinformatics, Computational Biooengineering, Biomaterials, Tissue Engineering, Biomechanics, Cardiovascular Engineering, Drug Delivery, Neuroengineering, Biomedical Engineering, BME, Bachelor of Science, BS, Degree Program, BS/MS Accelerated Degree Program, Co-ops in Biomedical Engineering, Senior Design, Undergraduate Research, Translational Design Clinical Immersion Co-op Program, Metropolitan Philadelphia, Health Care Innovation Collaborative, Greater Philadelphia, Interdisciplinary, Pre-med &amp; Pre-law Options, Master of Science, MS Degree Program, Biomedical Science, Integrated Biomedical Engineering and Business, IBEB, Doctoral, PhD, Degree Program, Fellowships and Assistantships, Biomedical Technology Development,  advanced certificate program, Entrepreneurship for BMEs, Design Thinking for BMEs, Biomedical Ethics and Law, Medical Device Development, Clinical Rotation" /><meta id="metaDescription" name="Description" content="The School of Biomedical Engineering (BME) at Drexel University is nationally recognized for research in biomedical engineering and science. Learn about our unique BME program offerings including innovative courses &amp; research and multi-disciplinary instruction at the undergraduate &amp; graduate levels.
+
+
+
+" /><meta id="metaAbstract" name="Abstract" content="The School of Biomedical Engineering is a nationally recognized center for research in biomedical engineering and science offering multi-disciplinary instruction at the graduate and undergraduate levels" /><meta id="metaServer" name="Server" content="SCPRODPUB3" /><meta id="ogTitle" property="og:title" content="School of Biomedical Engineering, Science and Health Systems - School of Biomedical Engineering, Science and Health Systems" /><meta id="ogType" property="og:type" content="website" /><meta id="ogSiteName" property="og:site_name" content="School of Biomedical Engineering, Science and Health Systems" /><meta id="ogURL" property="og:url" content="http://drexel.edu/biomed/" /><meta id="ogImage" property="og:image" content="http://drexel.edu/~/media/Images/biomed/Biomed_TwoLine_WHITE_Gold.ashx" />
+    <!--imports mobile starting point, base styles, libraries, resets-->
+  <link rel="stylesheet" href="/~/stylesheets/biomed/mobile/?hash=c3e6717bc74b8e5b507241bdf3bdbb7b">
+
+
+  <!--720 for (ipad-y)screens-->
+  <!--[if gte IE 9]><!-->
+  <style type="text/css" media="all and (min-width: 740px) and (min-device-width: 740px), (max-device-width: 800px) and (min-width: 740px) and (orientation:landscape)">@import url("/~/stylesheets/biomed/portrait/?hash=db2bcf5f6503ddf18d62b52b13fd486f");</style>
+  <!--<![endif]-->
+
+
+  <!--default non-mobile layout for legacy-->
+  <!--[if (lt IE 9)&(!IEMobile)]>
+  <style type="text/css" media="all">@import url("/~/stylesheets/biomed/landscape/?hash=f020df55d2489b9b5c2cb73c0d98fd83");</style>
+  <![endif]-->
+
+  <!--960 for appropriate screens. Bumped out 20 to accomodate design-->
+  <!--[if gte IE 9]><!-->
+  <style type="text/css" media="all and (min-width: 1020px) and (min-device-width: 1020px), all and (max-device-width: 1024px) and (min-width: 1024px) and (orientation:landscape)">@import url("/~/stylesheets/biomed/landscape/?hash=f020df55d2489b9b5c2cb73c0d98fd83");</style>
+  <!--<![endif]-->
+
+
+  <!--1200 for larger screens-->
+  <!--[if gte IE 9]><!-->
+  <style type="text/css" media="all and (min-width: 1260px)">@import url("/~/stylesheets/biomed/computer/?hash=6dffa56da5ac88f469b4bec6ba6622d2");</style>
+  <!--<![endif]-->
+
+    <!--imports mobile starting point, base styles, libraries, resets-->
+  <link rel="stylesheet" href="/~/stylesheets/biomed/home/mobile/?hash=50299dd669bab5df4006ef9fbfb43c17">
+
+
+  <!--720 for (ipad-y)screens-->
+  <!--[if gte IE 9]><!-->
+  <style type="text/css" media="all and (min-width: 740px) and (min-device-width: 740px), (max-device-width: 800px) and (min-width: 740px) and (orientation:landscape)">@import url("/~/stylesheets/biomed/home/portrait/?hash=a78136167740c4d3ad7ea300ea3e1415");</style>
+  <!--<![endif]-->
+
+
+  <!--default non-mobile layout for legacy-->
+  <!--[if (lt IE 9)&(!IEMobile)]>
+  <style type="text/css" media="all">@import url("/~/stylesheets/biomed/home/landscape/?hash=ade3fc17e038acdd623f26cd1ced2440");</style>
+  <![endif]-->
+
+  <!--960 for appropriate screens. Bumped out 20 to accomodate design-->
+  <!--[if gte IE 9]><!-->
+  <style type="text/css" media="all and (min-width: 1020px) and (min-device-width: 1020px), all and (max-device-width: 1024px) and (min-width: 1024px) and (orientation:landscape)">@import url("/~/stylesheets/biomed/home/landscape/?hash=ade3fc17e038acdd623f26cd1ced2440");</style>
+  <!--<![endif]-->
+
+
+  <!--1200 for larger screens-->
+  <!--[if gte IE 9]><!-->
+  <style type="text/css" media="all and (min-width: 1260px)">@import url("/~/stylesheets/biomed/home/computer/?hash=2ca5c745d79f745b544506abc61fda7d");</style>
+  <!--<![endif]-->
+  <script src="/bundles/v2-core-js?v=hEj_x7Fv0tntoTk5D_5oTvxm6axNFNqlwYHIo4ehv9U1"></script>
+
+
+
+<!--[if IE 8]>
+    <script src="/sc_scripts/V2/libs/ie8_fix_maxwidth.js" type="text/javascript"></script>
+<![endif]-->
+
+<div id="headtag_3_divSnippet" class="">
+    <meta name="msvalidate.01" content="BCBA97C5C3BA1904E73FF43CC5A86300" />
+</div><div id="headtag_4_divSnippet" class="">
+    <script type="text/javascript" src="/sc_scripts/V2/libs/jquery.dotdotdot.min.js"></script>
+
+</div><link id="~/sc_scripts/jquery-ui-1.8.23/css/smoothness/jquery-ui-1.8.23.custom.css" type="text/css" rel="stylesheet" href="../sc_scripts/jquery-ui-1.8.23/css/smoothness/jquery-ui-1.8.23.custom.css" /><link id="/~/stylesheets/Component/Lightbox Photo Gallery/iLightbox UI" type="text/css" rel="stylesheet" href="/~/stylesheets/Component/Lightbox Photo Gallery/iLightbox UI" /></head>
+<body id="htmlBody" class="alt-layout">
+
+    <!-- Google Tag Manager -->
+    <noscript><iframe src="//www.googletagmanager.com/ns.html?id=GTM-TJCKC2"
+    height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+    <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+    new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+    j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+    '//www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+    })(window,document,'script','dataLayer','GTM-TJCKC2');</script>
+    <!-- End Google Tag Manager -->
+
+    <form method="post" action="/biomed/" id="mainform">
+<div class="aspNetHidden">
+<input type="hidden" name="__VIEWSTATE" id="__VIEWSTATE" value="/wEPDwUJODI2MTg5MDQwDxYCHhNWYWxpZGF0ZVJlcXVlc3RNb2RlAgEWBAICD2QWFgIGD2QWAmYPFgQeBFRleHQFSVNjaG9vbCBvZiBCaW9tZWRpY2FsIEVuZ2luZWVyaW5nLCBTY2llbmNlIGFuZCBIZWFsdGggU3lzdGVtcyB8IERyZXhlbCBCTUUeB1Zpc2libGVnZAIKDxYEHgdjb250ZW50BawHVW5kZXJncmFkdWF0ZSBQcm9ncmFtcywgR3JhZHVhdGUgUHJvZ3JhbXMsIFJlc2VhcmNoLCBCaW9pbmZvcm1hdGljcywgQ29tcHV0YXRpb25hbCBCaW9vZW5naW5lZXJpbmcsIEJpb21hdGVyaWFscywgVGlzc3VlIEVuZ2luZWVyaW5nLCBCaW9tZWNoYW5pY3MsIENhcmRpb3Zhc2N1bGFyIEVuZ2luZWVyaW5nLCBEcnVnIERlbGl2ZXJ5LCBOZXVyb2VuZ2luZWVyaW5nLCBCaW9tZWRpY2FsIEVuZ2luZWVyaW5nLCBCTUUsIEJhY2hlbG9yIG9mIFNjaWVuY2UsIEJTLCBEZWdyZWUgUHJvZ3JhbSwgQlMvTVMgQWNjZWxlcmF0ZWQgRGVncmVlIFByb2dyYW0sIENvLW9wcyBpbiBCaW9tZWRpY2FsIEVuZ2luZWVyaW5nLCBTZW5pb3IgRGVzaWduLCBVbmRlcmdyYWR1YXRlIFJlc2VhcmNoLCBUcmFuc2xhdGlvbmFsIERlc2lnbiBDbGluaWNhbCBJbW1lcnNpb24gQ28tb3AgUHJvZ3JhbSwgTWV0cm9wb2xpdGFuIFBoaWxhZGVscGhpYSwgSGVhbHRoIENhcmUgSW5ub3ZhdGlvbiBDb2xsYWJvcmF0aXZlLCBHcmVhdGVyIFBoaWxhZGVscGhpYSwgSW50ZXJkaXNjaXBsaW5hcnksIFByZS1tZWQgJiBQcmUtbGF3IE9wdGlvbnMsIE1hc3RlciBvZiBTY2llbmNlLCBNUyBEZWdyZWUgUHJvZ3JhbSwgQmlvbWVkaWNhbCBTY2llbmNlLCBJbnRlZ3JhdGVkIEJpb21lZGljYWwgRW5naW5lZXJpbmcgYW5kIEJ1c2luZXNzLCBJQkVCLCBEb2N0b3JhbCwgUGhELCBEZWdyZWUgUHJvZ3JhbSwgRmVsbG93c2hpcHMgYW5kIEFzc2lzdGFudHNoaXBzLCBCaW9tZWRpY2FsIFRlY2hub2xvZ3kgRGV2ZWxvcG1lbnQsICBhZHZhbmNlZCBjZXJ0aWZpY2F0ZSBwcm9ncmFtLCBFbnRyZXByZW5ldXJzaGlwIGZvciBCTUVzLCBEZXNpZ24gVGhpbmtpbmcgZm9yIEJNRXMsIEJpb21lZGljYWwgRXRoaWNzIGFuZCBMYXcsIE1lZGljYWwgRGV2aWNlIERldmVsb3BtZW50LCBDbGluaWNhbCBSb3RhdGlvbh8CZ2QCCw8WBB8DBbUCVGhlIFNjaG9vbCBvZiBCaW9tZWRpY2FsIEVuZ2luZWVyaW5nIChCTUUpIGF0IERyZXhlbCBVbml2ZXJzaXR5IGlzIG5hdGlvbmFsbHkgcmVjb2duaXplZCBmb3IgcmVzZWFyY2ggaW4gYmlvbWVkaWNhbCBlbmdpbmVlcmluZyBhbmQgc2NpZW5jZS4gTGVhcm4gYWJvdXQgb3VyIHVuaXF1ZSBCTUUgcHJvZ3JhbSBvZmZlcmluZ3MgaW5jbHVkaW5nIGlubm92YXRpdmUgY291cnNlcyAmIHJlc2VhcmNoIGFuZCBtdWx0aS1kaXNjaXBsaW5hcnkgaW5zdHJ1Y3Rpb24gYXQgdGhlIHVuZGVyZ3JhZHVhdGUgJiBncmFkdWF0ZSBsZXZlbHMuIA0KDQoNCg0KHwJnZAIMDxYEHwMFygFUaGUgU2Nob29sIG9mIEJpb21lZGljYWwgRW5naW5lZXJpbmcgaXMgYSBuYXRpb25hbGx5IHJlY29nbml6ZWQgY2VudGVyIGZvciByZXNlYXJjaCBpbiBiaW9tZWRpY2FsIGVuZ2luZWVyaW5nIGFuZCBzY2llbmNlIG9mZmVyaW5nIG11bHRpLWRpc2NpcGxpbmFyeSBpbnN0cnVjdGlvbiBhdCB0aGUgZ3JhZHVhdGUgYW5kIHVuZGVyZ3JhZHVhdGUgbGV2ZWxzHwJnZAINDxYEHwMFClNDUFJPRFBVQjMfAmdkAg4PFgQfAwV7U2Nob29sIG9mIEJpb21lZGljYWwgRW5naW5lZXJpbmcsIFNjaWVuY2UgYW5kIEhlYWx0aCBTeXN0ZW1zIC0gU2Nob29sIG9mIEJpb21lZGljYWwgRW5naW5lZXJpbmcsIFNjaWVuY2UgYW5kIEhlYWx0aCBTeXN0ZW1zHwJnZAIPDxYEHwMFB3dlYnNpdGUfAmdkAhAPFgQfAwU8U2Nob29sIG9mIEJpb21lZGljYWwgRW5naW5lZXJpbmcsIFNjaWVuY2UgYW5kIEhlYWx0aCBTeXN0ZW1zHwJnZAIRDxYEHwMFGWh0dHA6Ly9kcmV4ZWwuZWR1L2Jpb21lZC8fAmdkAhIPFgQfAwVGaHR0cDovL2RyZXhlbC5lZHUvfi9tZWRpYS9JbWFnZXMvYmlvbWVkL0Jpb21lZF9Ud29MaW5lX1dISVRFX0dvbGQuYXNoeB8CZ2QCEw9kFghmD2QWAmYPZBYIZg8WBB8BBbEBDQogICAgPCEtLWltcG9ydHMgbW9iaWxlIHN0YXJ0aW5nIHBvaW50LCBiYXNlIHN0eWxlcywgbGlicmFyaWVzLCByZXNldHMtLT4NCgk8bGluayByZWw9InN0eWxlc2hlZXQiIGhyZWY9Ii9+L3N0eWxlc2hlZXRzL2Jpb21lZC9tb2JpbGUvP2hhc2g9YzNlNjcxN2JjNzRiOGU1YjUwNzI0MWJkZjNiZGJiN2IiPg0KHwJnZAICDxYEHwEF1gINCgk8IS0tNzIwIGZvciAoaXBhZC15KXNjcmVlbnMtLT4NCgk8IS0tW2lmIGd0ZSBJRSA5XT48IS0tPg0KCTxzdHlsZSB0eXBlPSJ0ZXh0L2NzcyIgbWVkaWE9ImFsbCBhbmQgKG1pbi13aWR0aDogNzQwcHgpIGFuZCAobWluLWRldmljZS13aWR0aDogNzQwcHgpLCAobWF4LWRldmljZS13aWR0aDogODAwcHgpIGFuZCAobWluLXdpZHRoOiA3NDBweCkgYW5kIChvcmllbnRhdGlvbjpsYW5kc2NhcGUpIj5AaW1wb3J0IHVybCgiL34vc3R5bGVzaGVldHMvYmlvbWVkL3BvcnRyYWl0Lz9oYXNoPWRiMmJjZjVmNjUwM2RkZjE4ZDYyYjUyYjEzZmQ0ODZmIik7PC9zdHlsZT4NCgk8IS0tPCFbZW5kaWZdLS0+DQofAmdkAgQPFgQfAQX1BA0KCTwhLS1kZWZhdWx0IG5vbi1tb2JpbGUgbGF5b3V0IGZvciBsZWdhY3ktLT4NCgk8IS0tW2lmIChsdCBJRSA5KSYoIUlFTW9iaWxlKV0+DQoJPHN0eWxlIHR5cGU9InRleHQvY3NzIiBtZWRpYT0iYWxsIj5AaW1wb3J0IHVybCgiL34vc3R5bGVzaGVldHMvYmlvbWVkL2xhbmRzY2FwZS8/aGFzaD1mMDIwZGY1NWQyNDg5YjliNWMyY2I3M2MwZDk4ZmQ4MyIpOzwvc3R5bGU+DQoJPCFbZW5kaWZdLS0+DQogICAgCQ0KCTwhLS05NjAgZm9yIGFwcHJvcHJpYXRlIHNjcmVlbnMuIEJ1bXBlZCBvdXQgMjAgdG8gYWNjb21vZGF0ZSBkZXNpZ24tLT4NCgk8IS0tW2lmIGd0ZSBJRSA5XT48IS0tPg0KCTxzdHlsZSB0eXBlPSJ0ZXh0L2NzcyIgbWVkaWE9ImFsbCBhbmQgKG1pbi13aWR0aDogMTAyMHB4KSBhbmQgKG1pbi1kZXZpY2Utd2lkdGg6IDEwMjBweCksIGFsbCBhbmQgKG1heC1kZXZpY2Utd2lkdGg6IDEwMjRweCkgYW5kIChtaW4td2lkdGg6IDEwMjRweCkgYW5kIChvcmllbnRhdGlvbjpsYW5kc2NhcGUpIj5AaW1wb3J0IHVybCgiL34vc3R5bGVzaGVldHMvYmlvbWVkL2xhbmRzY2FwZS8/aGFzaD1mMDIwZGY1NWQyNDg5YjliNWMyY2I3M2MwZDk4ZmQ4MyIpOzwvc3R5bGU+DQoJPCEtLTwhW2VuZGlmXS0tPg0KHwJnZAIGDxYEHwEF6wENCgk8IS0tMTIwMCBmb3IgbGFyZ2VyIHNjcmVlbnMtLT4NCgk8IS0tW2lmIGd0ZSBJRSA5XT48IS0tPg0KCTxzdHlsZSB0eXBlPSJ0ZXh0L2NzcyIgbWVkaWE9ImFsbCBhbmQgKG1pbi13aWR0aDogMTI2MHB4KSI+QGltcG9ydCB1cmwoIi9+L3N0eWxlc2hlZXRzL2Jpb21lZC9jb21wdXRlci8/aGFzaD02ZGZmYTU2ZGE1YWM4OGY0NjliNGJlYzZiYTY2MjJkMiIpOzwvc3R5bGU+DQoJPCEtLTwhW2VuZGlmXS0tPg0KHwJnZAIBD2QWAmYPZBYIZg8WBB8BBbYBDQogICAgPCEtLWltcG9ydHMgbW9iaWxlIHN0YXJ0aW5nIHBvaW50LCBiYXNlIHN0eWxlcywgbGlicmFyaWVzLCByZXNldHMtLT4NCgk8bGluayByZWw9InN0eWxlc2hlZXQiIGhyZWY9Ii9+L3N0eWxlc2hlZXRzL2Jpb21lZC9ob21lL21vYmlsZS8/aGFzaD01MDI5OWRkNjY5YmFiNWRmNDAwNmVmOWZiZmI0M2MxNyI+DQofAmdkAgIPFgQfAQXbAg0KCTwhLS03MjAgZm9yIChpcGFkLXkpc2NyZWVucy0tPg0KCTwhLS1baWYgZ3RlIElFIDldPjwhLS0+DQoJPHN0eWxlIHR5cGU9InRleHQvY3NzIiBtZWRpYT0iYWxsIGFuZCAobWluLXdpZHRoOiA3NDBweCkgYW5kIChtaW4tZGV2aWNlLXdpZHRoOiA3NDBweCksIChtYXgtZGV2aWNlLXdpZHRoOiA4MDBweCkgYW5kIChtaW4td2lkdGg6IDc0MHB4KSBhbmQgKG9yaWVudGF0aW9uOmxhbmRzY2FwZSkiPkBpbXBvcnQgdXJsKCIvfi9zdHlsZXNoZWV0cy9iaW9tZWQvaG9tZS9wb3J0cmFpdC8/aGFzaD1hNzgxMzYxNjc3NDBjNGQzYWQ3ZWEzMDBlYTNlMTQxNSIpOzwvc3R5bGU+DQoJPCEtLTwhW2VuZGlmXS0tPg0KHwJnZAIEDxYEHwEF/wQNCgk8IS0tZGVmYXVsdCBub24tbW9iaWxlIGxheW91dCBmb3IgbGVnYWN5LS0+DQoJPCEtLVtpZiAobHQgSUUgOSkmKCFJRU1vYmlsZSldPg0KCTxzdHlsZSB0eXBlPSJ0ZXh0L2NzcyIgbWVkaWE9ImFsbCI+QGltcG9ydCB1cmwoIi9+L3N0eWxlc2hlZXRzL2Jpb21lZC9ob21lL2xhbmRzY2FwZS8/aGFzaD1hZGUzZmMxN2UwMzhhY2RkNjIzZjI2Y2QxY2VkMjQ0MCIpOzwvc3R5bGU+DQoJPCFbZW5kaWZdLS0+DQogICAgCQ0KCTwhLS05NjAgZm9yIGFwcHJvcHJpYXRlIHNjcmVlbnMuIEJ1bXBlZCBvdXQgMjAgdG8gYWNjb21vZGF0ZSBkZXNpZ24tLT4NCgk8IS0tW2lmIGd0ZSBJRSA5XT48IS0tPg0KCTxzdHlsZSB0eXBlPSJ0ZXh0L2NzcyIgbWVkaWE9ImFsbCBhbmQgKG1pbi13aWR0aDogMTAyMHB4KSBhbmQgKG1pbi1kZXZpY2Utd2lkdGg6IDEwMjBweCksIGFsbCBhbmQgKG1heC1kZXZpY2Utd2lkdGg6IDEwMjRweCkgYW5kIChtaW4td2lkdGg6IDEwMjRweCkgYW5kIChvcmllbnRhdGlvbjpsYW5kc2NhcGUpIj5AaW1wb3J0IHVybCgiL34vc3R5bGVzaGVldHMvYmlvbWVkL2hvbWUvbGFuZHNjYXBlLz9oYXNoPWFkZTNmYzE3ZTAzOGFjZGQ2MjNmMjZjZDFjZWQyNDQwIik7PC9zdHlsZT4NCgk8IS0tPCFbZW5kaWZdLS0+DQofAmdkAgYPFgQfAQXwAQ0KCTwhLS0xMjAwIGZvciBsYXJnZXIgc2NyZWVucy0tPg0KCTwhLS1baWYgZ3RlIElFIDldPjwhLS0+DQoJPHN0eWxlIHR5cGU9InRleHQvY3NzIiBtZWRpYT0iYWxsIGFuZCAobWluLXdpZHRoOiAxMjYwcHgpIj5AaW1wb3J0IHVybCgiL34vc3R5bGVzaGVldHMvYmlvbWVkL2hvbWUvY29tcHV0ZXIvP2hhc2g9MmNhNWM3NDVkNzlmNzQ1YjU0NDUwNmFiYzYxZmRhN2QiKTs8L3N0eWxlPg0KCTwhLS08IVtlbmRpZl0tLT4NCh8CZ2QCAw9kFgJmD2QWAmYPFgQeBWNsYXNzZR8CZ2QCBA9kFgJmD2QWAmYPFgQfBGUfAmdkAgQPFgIfBAUKYWx0LWxheW91dBYCAgEQZGQWAgIFD2QWCGYPZBYCZg9kFgICAg8WBB8BBZsCDQo8dWwgY2xhc3M9ImJnLWltYWdlcyIgaWQ9ImJnLWltYWdlcyI+DQogICAgPGxpPjxub3NjcmlwdCBkYXRhLXBhdGg9Ii9+L21lZGlhL0ltYWdlcy9iaW9tZWQvYmFja2dyb3VuZC9ob21lLWJnIiBkYXRhLWFsdD0iQmlvbWVkIEhvbWUgSW1hZ2UiIGNsYXNzPSJyZXNwb25zaXZlLWltYWdlIj48aW1nIHNyYz0iL34vbWVkaWEvSW1hZ2VzL2Jpb21lZC9iYWNrZ3JvdW5kL2hvbWUtYmcvbW9iaWxlLmFzaHgiIGFsdD0iQmlvbWVkIEhvbWUgSW1hZ2UiIC8+PC9ub3NjcmlwdD48L2xpPg0KPC91bD4NCh8CZ2QCAQ9kFgJmD2QWBgIBDw8WAh8CaGRkAgMPDxYCHwJnZBYEAgEPDxYCHgtOYXZpZ2F0ZVVybAUIL2Jpb21lZC9kFgJmDw8WBB4ISW1hZ2VVcmwFci9+L21lZGlhL0ltYWdlcy9iaW9tZWQvaWRlbnRpdHkvQmlvbWVkX1R3b0xpbmVfZ29sZC5hc2h4P2g9MTEwJnc9NDYwJmhhc2g9QzRFNThFM0UyNjlFMkIzRjgxOTFEMjMwNDBGMzY2QjI4NTFGODAzRh4aR2VuZXJhdGVFbXB0eUFsdGVybmF0ZVRleHRnZGQCBQ8WAh8CaGQCBQ9kFgICAQ8WBB8BBesBDQogICAgICAgICAgICAgICAgICAgICAgICA8c2NyaXB0IHR5cGU9InRleHQvamF2YXNjcmlwdCI+DQogICAgICAgICAgICAgICAgICAgICAgICAgICAgJChkb2N1bWVudCkucmVhZHkoZnVuY3Rpb24gKCkgeyBEUkVYRUwuV3JhcHBlci5PdmVycmlkZVNlYXJjaEJveCgiL2Jpb21lZC9TZWFyY2gvIikgfSk7DQogICAgICAgICAgICAgICAgICAgICAgICA8L3NjcmlwdD4NCiAgICAgICAgICAgICAgICAgICAgICAgIB8CZ2QCAg9kFgJmD2QWBgIBDxYCHwQFEXBhbmVsLW9uZSBncmlkLTE2FgICAQ9kFgZmD2QWAmYPZBYCZg8WAh8EBSBzbGlkZXNob3ctd3JhcHBlciBvdmVybGF5LWJpb21lZBYEAgEPZBYCAgEPFgIfAQW5GDxkaXYgY2xhc3M9Im92ZXJsYXktc2xpZGUiPjxpbWcgc3JjPSIvfi9tZWRpYS9JbWFnZXMvYmlvbWVkL3NsaWRlc2hvdy9jb2xsZWdlLWNob2ljZS5hc2h4P2g9MzkwJnc9ODgwJmhhc2g9QTFERjMzNkQ1MTk4OUQ0RkZEQkNDMThCNUE4NzEwRDMzQkI4MzBCNiIgYWx0PSJDb2xsZWdlIENob2ljZSBCZXN0IEJpb21lZGljYWwgRW5naW5lZXJpbmcgTWFzdGVyJ3MgMjAxNyIgd2lkdGg9Ijg4MCIgaGVpZ2h0PSIzOTAiIC8+ICA8ZGl2IGNsYXNzPSJvdmVybGF5LXNsaWRlLXRleHQiPjxhIGNsYXNzPSJtb3JlLWJ1dHRvbiIgaHJlZj0iL2Jpb21lZC9hY2FkZW1pY3MvZ3JhZHVhdGUtcHJvZ3JhbXMvYmlvbWVkaWNhbC1lbmdpbmVlcmluZy1tYXN0ZXItb2Ytc2NpZW5jZS1kZWdyZWUvIj5CaW9tZWRpY2FsIEVuZ2luZWVyaW5nIE1hc3RlcidzIERlZ3JlZTwvYT4gIDwvZGl2PjwvZGl2PjxkaXYgY2xhc3M9Im92ZXJsYXktc2xpZGUiPjxpbWcgc3JjPSIvfi9tZWRpYS9JbWFnZXMvYmlvbWVkL3NsaWRlc2hvdy9zaXRlY29yZS1zbGlkZXNob3ctNi5hc2h4P2g9MzkwJnc9ODgwJmhhc2g9MTE0Mzk3MjMzODE5QjNFQkNFOEE5NjRGMjBDOEMzODEwNkMyNTYzMSIgYWx0PSJVbmRlcmdyYWR1YXRlIEJpb21lY2hhbmljcyBDbGFzc3Jvb20iIHdpZHRoPSI4ODAiIGhlaWdodD0iMzkwIiAvPiAgPGRpdiBjbGFzcz0ib3ZlcmxheS1zbGlkZS10ZXh0Ij48YSBjbGFzcz0ibW9yZS1idXR0b24iIGhyZWY9Ii9iaW9tZWQvYWNhZGVtaWNzL3VuZGVyZ3JhZHVhdGUtcHJvZ3JhbXMvIj5PdmVydmlldyBvZiBvdXIgVW5kZXJncmFkdWF0ZSBQcm9ncmFtczwvYT4gIDwvZGl2PjwvZGl2PjxkaXYgY2xhc3M9Im92ZXJsYXktc2xpZGUiPjxpbWcgc3JjPSIvfi9tZWRpYS9JbWFnZXMvYmlvbWVkL3NsaWRlc2hvdy9zbGlkZXNob3ctY2lwLmFzaHg/aD0zOTAmdz04ODAmaGFzaD1GMDFGMUZGQ0U2M0U1RjdEMzlGNzREQ0EwMjZFMjQyMjk2NTZFRTRFIiBhbHQ9IlRyYW5zbGF0aW9uYWwgRGVzaWduIENsaW5pY2FsIEltbWVyc2lvbiBDby1vcCBQcm9ncmFtIiB3aWR0aD0iODgwIiBoZWlnaHQ9IjM5MCIgLz4gIDxkaXYgY2xhc3M9Im92ZXJsYXktc2xpZGUtdGV4dCI+PGEgY2xhc3M9Im1vcmUtYnV0dG9uIiBocmVmPSJodHRwOi8vZHJleGVsLmVkdS9iaW9tZWQvYWNhZGVtaWNzL3VuZGVyZ3JhZHVhdGUtcHJvZ3JhbXMvdHJhbnNsYXRpb25hbC1kZXNpZ24tY2xpbmljYWwtaW1tZXJzaW9uLWNvLW9wLyI+TGVhcm4gbW9yZSBhYm91dCB0aGlzIGlubm92YXRpdmUgQ28tb3AgcHJvZ3JhbTwvYT4gIDwvZGl2PjwvZGl2PjxkaXYgY2xhc3M9Im92ZXJsYXktc2xpZGUiPjxpbWcgc3JjPSIvfi9tZWRpYS9JbWFnZXMvYmlvbWVkL3NsaWRlc2hvdy9zaXRlY29yZS1zbGlkZXNob3ctNC5hc2h4P2g9MzkwJnc9ODgwJmhhc2g9MDlFMTJBNkI2RDAzMENBQzQ3Q0E2NzI0MjFGMEZEQTU4QUUxRDExRSIgYWx0PSJHcmFkdWF0ZSBTdHVkZW50cyBkb2luZyBSZXNlYXJjaCBpbiBTYWZldHkgR2VhciIgd2lkdGg9Ijg4MCIgaGVpZ2h0PSIzOTAiIC8+ICA8ZGl2IGNsYXNzPSJvdmVybGF5LXNsaWRlLXRleHQiPjxhIGNsYXNzPSJtb3JlLWJ1dHRvbiIgaHJlZj0iL2Jpb21lZC9hY2FkZW1pY3MvZ3JhZHVhdGUtcHJvZ3JhbXMvIj5PdmVydmlldyBvZiBvdXIgR3JhZHVhdGUgUHJvZ3JhbXM8L2E+ICA8L2Rpdj48L2Rpdj48ZGl2IGNsYXNzPSJvdmVybGF5LXNsaWRlIj48aW1nIHNyYz0iL34vbWVkaWEvSW1hZ2VzL2Jpb21lZC9zbGlkZXNob3cvb24tY2FtcHVzLW1haW4tYnVpbGRpbmcuYXNoeD9oPTM5MCZ3PTg4MCZoYXNoPTc1NDhDOEEzOTE2NzVBNkYxMTIyMTY0NEIxQUI1M0RGQjhGNEQ0NzIiIGFsdD0iT24gQ2FtcHVzIEhpc3RvcmljIERyZXhlbCBNYWluIEJ1aWxkaW5nIiB3aWR0aD0iODgwIiBoZWlnaHQ9IjM5MCIgLz4gIDxkaXYgY2xhc3M9Im92ZXJsYXktc2xpZGUtdGV4dCI+PGEgY2xhc3M9Im1vcmUtYnV0dG9uIiBocmVmPSIvYmlvbWVkL2FkbWlzc2lvbnMvYXBwbHkvIj5BcHBseSB0byBCSU9NRUQ8L2E+ICA8L2Rpdj48L2Rpdj48ZGl2IGNsYXNzPSJvdmVybGF5LXNsaWRlIj48aW1nIHNyYz0iL34vbWVkaWEvSW1hZ2VzL2Jpb21lZC9zbGlkZXNob3cvQmFycm9zXzA4MDgwNl8wNjktMi5hc2h4P2g9MzkwJnc9ODgwJmhhc2g9QUMxMUVBOEU5ODQ5RjI4NThFOEFDQzZFRjkyRUNDNTA2NDI2QTY4QyIgYWx0PSIgIiB3aWR0aD0iODgwIiBoZWlnaHQ9IjM5MCIgLz4gIDxkaXYgY2xhc3M9Im92ZXJsYXktc2xpZGUtdGV4dCI+PGEgY2xhc3M9Im1vcmUtYnV0dG9uIiBocmVmPSIvYmlvbWVkL3Jlc2VhcmNoLyI+T3ZlcnZpZXcgb2YgT3VyIFNjaG9vbCdzIFJlc2VhcmNoPC9hPiAgPC9kaXY+PC9kaXY+PGRpdiBjbGFzcz0ib3ZlcmxheS1zbGlkZSI+PGltZyBzcmM9Ii9+L21lZGlhL0ltYWdlcy9iaW9tZWQvc2xpZGVzaG93L0xTUy1TbGlkZS5hc2h4P2g9MzkwJnc9ODgwJmhhc2g9RjYxRkY0RjY4OTAxMzJFODI0MDIwQkQ4QzUyRkNEMEQ0RjI3NkYxNCIgYWx0PSIgIiB3aWR0aD0iODgwIiBoZWlnaHQ9IjM5MCIgLz4gIDxkaXYgY2xhc3M9Im92ZXJsYXktc2xpZGUtdGV4dCI+PGEgY2xhc3M9Im1vcmUtYnV0dG9uIiBocmVmPSIvfi9tZWRpYS9GaWxlcy9iaW9tZWQvTFNTX1BvcnRmb2xpb19BTExfU2l0ZV92MzMuYXNoeD9sYT1lbiI+VmlldyB0aGUgTGlmZSBTYXZpbmdzIFNvbHV0aW9ucyBQb3J0Zm9saW88L2E+ICA8L2Rpdj48L2Rpdj48ZGl2IGNsYXNzPSJvdmVybGF5LXNsaWRlIj48aW1nIHNyYz0iL34vbWVkaWEvSW1hZ2VzL2Jpb21lZC9zbGlkZXNob3cvMjAxNV8xMF84RHJlQmlvMDQuYXNoeD9oPTM5MCZ3PTg4MCZoYXNoPTc1NDU2NkJERERENTExMEJFMTAyQTVCNDA1RTRCMjI5NjEwRkRBNTQiIGFsdD0iQ28tb3BzIHdvcmtpbmcgYXQgSW1wbGFudCBSZXNlYXJjaCBDZW50ZXIiIHdpZHRoPSI4ODAiIGhlaWdodD0iMzkwIiAvPiAgPGRpdiBjbGFzcz0ib3ZlcmxheS1zbGlkZS10ZXh0Ij48YSBocmVmPSIvYmlvbWVkL2FjYWRlbWljcy91bmRlcmdyYWR1YXRlLXByb2dyYW1zL2NvLW9wcy1pbi1iaW9tZWRpY2FsLWVuZ2luZWVyaW5nLyI+RXhwbG9yZSBDby1vcHMgaW4gQmlvbWVkaWNhbCBFbmdpbmVlcmluZzwvYT4gIDwvZGl2PjwvZGl2PmQCAw8WAh8CZxYCAgEPFgIfAQXrATxkaXYgaWQ9InByZXZTbGlkZTEiIGNsYXNzPSJzbGlkZS1sZWZ0Ij48YSBocmVmPSIjIiBjbGFzcz0ibGVmdC1hcnJvdyI+UHJldmlvdXM8L2E+PC9kaXY+CjxkaXYgY2xhc3M9InNsaWRlc2hvdy1wYWdlci1jb250YWluZXIiIGlkPSJQYWdlcjEiPjwvZGl2PjxkaXYgaWQ9Im5leHRTbGlkZTEiIGNsYXNzPSJzbGlkZS1yaWdodCI+PGEgaHJlZj0iIyIgY2xhc3M9InJpZ2h0LWFycm93Ij5OZXh0PC9hPjwvZGl2PgpkAgEPZBYCZg9kFgRmDxYCHgtfIUl0ZW1Db3VudAIDFgZmD2QWAgIBD2QWBAIBDw8WBB8FBWZodHRwOi8vZHJleGVsLmVkdS9iaW9tZWQvbmV3cy1hbmQtZXZlbnRzL25ld3MvMjAxOC9KdWx5L0NvdWx0ZXItRHJleGVsLVRyYW5zbGF0aW9uYWwtUmVzZWFyY2gtUHJvZ3JhbS8fAQVYQ291bHRlci1EcmV4ZWwgVHJhbnNsYXRpb25hbCBSZXNlYXJjaCBQcm9ncmFtIENvbnRpbnVlcyBvbiBQYXRoIHRvIFN1Y2NlZWQgVGhyb3VnaCAyMDIxIGRkAgMPFgIeCWlubmVyaHRtbAUnDQogICAgICAgICAgICAgICAgICAgICAgICBKdWx5IDEwLCAyMDE4ZAIBD2QWAgIBD2QWBAIBDw8WBB8FBVhodHRwOi8vZHJleGVsLmVkdS9iaW9tZWQvbmV3cy1hbmQtZXZlbnRzL25ld3MvMjAxOC9KdW5lLzIwMTgtTmV1cm9lcmdvbm9taWNzLUNvbmZlcmVuY2UvHwEFU1N0dWR5aW5nIHRoZSBCcmFpbiBhdCBXb3JrOiBEcmV4ZWwgdG8gSG9zdCBJbnRlcm5hdGlvbmFsIE5ldXJvZXJnb25vbWljcyBDb25mZXJlbmNlZGQCAw8WAh8JBScNCiAgICAgICAgICAgICAgICAgICAgICAgIEp1bmUgMTgsIDIwMThkAgIPZBYCAgEPZBYEAgEPDxYEHwUFkAFodHRwOi8vZHJleGVsLmVkdS9iaW9tZWQvbmV3cy1hbmQtZXZlbnRzL25ld3MvMjAxOC9KdW5lL0RyZXhlbC1BZHZhbmNlcy1BbW9uZy1Ub3AtMTAwLVdvcmxkd2lkZS1Vbml2ZXJzaXRpZXMtR3JhbnRlZC1VUy1VdGlsaXR5LVBhdGVudHMtaW4tMjAxNy8fAQVXRHJleGVsIEFkdmFuY2VzIEFtb25nIFRvcCAxMDAgV29ybGR3aWRlIFVuaXZlcnNpdGllcyBHcmFudGVkIFVTIFV0aWxpdHkgUGF0ZW50cyBpbiAyMDE3ZGQCAw8WAh8JBSYNCiAgICAgICAgICAgICAgICAgICAgICAgIEp1bmUgNiwgMjAxOGQCAQ8PFgIfBQUdL2Jpb21lZC9uZXdzLWFuZC1ldmVudHMvbmV3cy9kZAICD2QWAmYPZBYCZg8WBB8EBQ9oaWdobGlnaHQtdmlkZW8fAmdkAgMPFgIfBAUQcGFuZWwtdHdvIGdyaWQtOBYCAgEPZBYIZg9kFgJmD2QWAmYPFgIfAmcWAgIBDxQrAAIPFgQeC18hRGF0YUJvdW5kZx8IAgRkZBYCZg9kFggCAQ9kFgICAQ8PFgIfBQUbL2Jpb21lZC9hY2FkZW1pY3Mvb3ZlcnZpZXcvZBYCAgEPFgIfAQUUUHJvc3BlY3RpdmUgU3R1ZGVudHNkAgIPZBYCAgEPDxYCHwUFGy9iaW9tZWQvcmVzb3VyY2VzL292ZXJ2aWV3L2QWAgIBDxYCHwEFEEN1cnJlbnQgU3R1ZGVudHNkAgMPZBYCAgEPDxYCHwUFMS9iaW9tZWQvcmVzb3VyY2VzL2N1cnJlbnQtdW5kZXJncmFkdWF0ZS9hZHZpc2luZy9kFgICAQ8WAh8BBRZVbmRlcmdyYWR1YXRlIEFkdmlzaW5nZAIED2QWAgIBDw8WAh8FBU4vYmlvbWVkL25ld3MtYW5kLWV2ZW50cy9ldmVudHMtY2FsZW5kYXIvc2VtaW5hci1hbmQtdGhlc2lzLWV2ZW50cy9zdW1tZXItdGVybS9kFgICAQ8WAh8BBRdCaW9tZWQgU2VtaW5hciBTY2hlZHVsZWQCAQ9kFgJmD2QWAmYPFgQfBAURaG9tZS1zb2NpYWwtbWVkaWEfAmdkAgIPZBYCZg9kFgJmD2QWBAIDDxQrAAIPFgQfCmcfCGZkZGQCBQ8WAh8CZxYCAgEPDxYCHwUFKC9iaW9tZWQvbmV3cy1hbmQtZXZlbnRzL2V2ZW50cy1jYWxlbmRhci9kZAIDD2QWAmYPZBYCZg8WBB8EZR8CZ2QCBQ8WAh8EBRNwYW5lbC10aHJlZSBncmlkLTE2ZAIDD2QWAmYPZBYEAgEPZBYQAgEPFgIfAQUGQklPTUVEZAIDD2QWAgIBDw8WAh8FBSVodHRwczovL3d3dy5mYWNlYm9vay5jb20vRHJleGVsQklPTUVEZGQCBQ9kFgICAQ8PFgIfBQUgaHR0cHM6Ly90d2l0dGVyLmNvbS9kcmV4ZWxiaW9tZWRkZAIHDxYCHwJnFgICAQ8PFgIfBQUiaHR0cHM6Ly9pbnN0YWdyYW0uY29tL2RyZXhlbGJpb21lZGRkAgkPZBYCAgEPDxYCHwUFOGh0dHBzOi8vd3d3LnlvdXR1YmUuY29tL2NoYW5uZWwvVUNsc1YyRGxvQVhoT1F0NHhuSkZDT2FnZGQCCw8WAh8CaGQCDQ8WAh8CZxYCAgEPDxYCHwUFLGh0dHBzOi8vd3d3LmxpbmtlZGluLmNvbS9zY2hvb2wvZHJleGVsYmlvbWVkZGQCDw8WAh8CZxYCAgEPDxYCHwUFHmh0dHBzOi8vdmltZW8uY29tL2RyZXhlbGJpb21lZGRkAgoPZBYCZg8WBB8BBesCDQo8c2NyaXB0Pg0KICAgIHZhciBfZ2FxID0gW1snX3NldEFjY291bnQnLCAnVUEtNDg3ODk0MTktMSddLCBbJ190cmFja1BhZ2V2aWV3J11dOw0KICAgIChmdW5jdGlvbiAoZCwgdCkgew0KICAgICAgICB2YXIgZyA9IGQuY3JlYXRlRWxlbWVudCh0KSwgcyA9IGQuZ2V0RWxlbWVudHNCeVRhZ05hbWUodClbMF07DQogICAgICAgIGcuc3JjID0gKCdodHRwczonID09IGxvY2F0aW9uLnByb3RvY29sID8gJy8vc3NsJyA6ICcvL3d3dycpICsgJy5nb29nbGUtYW5hbHl0aWNzLmNvbS9nYS5qcyc7DQogICAgICAgIHMucGFyZW50Tm9kZS5pbnNlcnRCZWZvcmUoZywgcykNCiAgICB9IChkb2N1bWVudCwgJ3NjcmlwdCcpKTsNCjwvc2NyaXB0Pg0KHwJnZBgCBR1ib2R5dGFnXzIkcGFuZWx0d29fMiRsdkV2ZW50cw88KwAOAwhmDGYNAv////8PZAUbYm9keXRhZ18yJHBhbmVsdHdvXzAkbHZMaXN0DxQrAA5kZGRkZGRkPCsABAACBGRkZGYC/////w9kCvrnxHNDx9rlh5KErCufnt1JR5Y=" />
+</div>
+
+<script src="/bundles/v2-pagenotfound-js?v=8lqYvpjOwX4-ySsDwSm00Q2Rjbq-OmK8boYwqgBLMt81"></script>
+
+<script src="/sc_scripts/V2/libs/jquery.cycle.all.js" type="text/javascript"></script>
+<script src="/sc_scripts/V2/libs/ilightbox.packed.js" type="text/javascript"></script>
+<script src="/sc_scripts/V2/components/slideshow.js" type="text/javascript"></script>
+<div class="aspNetHidden">
+
+  <input type="hidden" name="__VIEWSTATEGENERATOR" id="__VIEWSTATEGENERATOR" value="6654023C" />
+</div>
+
+
+
+<div id="ieCompatDiv" class="ie-compat">
+  <div style="" class="wrap row">
+    <p>For a better experience, click the <img src="/~/media/Images/coresite/ui/compatibility-icon.ashx" alt="Compatibility Mode"> icon above to turn off Compatibility Mode, which is only for viewing older websites.</p>
+  </div>
+</div>
+
+
+<ul class="bg-images" id="bg-images">
+    <li><noscript data-path="/~/media/Images/biomed/background/home-bg" data-alt="Biomed Home Image" class="responsive-image"><img src="/~/media/Images/biomed/background/home-bg/mobile.ashx" alt="Biomed Home Image" /></noscript></li>
+</ul>
+
+<div class="page-top">
+  <div class="wrap row " >
+    <header id="header">
+
+            <div id="bodytag_1_divLockUp">
+
+                <h1 id="lockup">
+                    <a id="bodytag_1_hlLockup" href="/biomed/"><img id="bodytag_1_imgLockup" src="/~/media/Images/biomed/identity/Biomed_TwoLine_gold.ashx?h=110&amp;w=460&amp;hash=C4E58E3E269E2B3F8191D23040F366B2851F803F" alt="" /><span class="lockupSiteName">School of Biomedical Engineering, Science and Health Systems</span></a>
+
+                </h1>
+
+
+</div>
+
+            <div id="bodytag_1_pnlNav">
+
+          <nav id="global-nav" class="row">
+            <div id="site-search">
+              <input type="search" class="header-search" placeholder="Search..." aria-label="Search Terms" />
+
+                        <script type="text/javascript">
+                            $(document).ready(function () { DREXEL.Wrapper.OverrideSearchBox("/biomed/Search/") });
+                        </script>
+
+            </div>
+                    <ul><li><a href="/biomed/academics/overview/">Prospective Students</a></li><li><a href="/biomed/resources/prospective-students/summer-academy/">Biomedical Engineering STEM Summer Camp</a></li><li><a href="/biomed/resources/faculty-and-staff/cdqi/">PEOs/SLOs</a></li><li><a href="https://secureia.drexel.edu/s/1683/form/16/form.aspx?sid=1683&gid=2&pgid=753&cid=1474&appeal=websyp&dids=18&bledit=1">Make A Gift</a></li></ul>
+
+<ul id="alt-layout-nav">
+    <li><a href="/biomed/">Site Home</a><ul><li class="bordered"><a href="/">Drexel University</a></li><li class="current bordered"><a href="/biomed/">School of Biomedical Engineering, Science and Health Systems</a></li><li><a href="/conquer/">CONQUER Collaborative</a></li><li><a href="/coulter/">Coulter - Drexel Translational Research Partnership Program</a></li></ul></li>
+</ul>
+          </nav>
+
+</div>
+            <div id="bodytag_1_pnlSiteNav">
+
+          <div id="main-nav">
+
+<nav>
+    <h1>Main Sections</h1>
+    <ul class="top-level"><li class="section"><a href="/biomed/academics/" class="section">Academics</a><ul><li><a href="/biomed/academics/overview/">Overview</a></li><li><a href="/biomed/academics/undergraduate-programs/">Undergraduate Programs</a></li><li><a href="/biomed/academics/graduate-programs/">Graduate Programs</a></li><li><a href="/biomed/academics/advanced-certificate-programs/">Advanced Certificate Programs</a></li></ul></li><li class="section"><a href="/biomed/admissions/" class="section">Admissions</a><ul></ul></li><li class="section"><a href="/biomed/research/" class="section">Research </a><ul><li><a href="/biomed/research/overview/">Overview</a></li><li><a href="/biomed/research/research-areas/">Research Areas</a></li><li><a href="/biomed/research/labs-research-groups/">Labs & Research Groups</a></li><li><a href="/biomed/research/translational-research/">Translational Research</a></li><li><a href="/biomed/research/international-partnerships/">International Partnerships</a></li><li><a href="/biomed/research/facilities/">Facilities & Equipment</a></li><li><a href="/biomed/research/funding-opportunities-and-resources/">Funding Opportunities & Resources</a></li></ul></li><li class="section"><a href="/biomed/news-and-events/" class="section">News & Events</a><ul><li><a href="/biomed/news-and-events/news/">News</a></li><li><a href="/biomed/news-and-events/events-calendar/">Events Calendar</a></li></ul></li><li class="section"><a href="/biomed/resources/" class="section">Resources</a><ul><li><a href="/biomed/resources/overview/">Overview</a></li><li><a href="/biomed/resources/prospective-students/">Prospective Students</a></li><li><a href="/biomed/resources/current-undergraduate/">Current Undergraduate</a></li><li><a href="/biomed/resources/current-graduate/">Current Graduate</a></li><li><a href="/biomed/resources/alumni/">Alumni</a></li><li><a href="/biomed/resources/faculty-and-staff/">Faculty & Staff</a></li></ul></li><li class="section"><a href="/biomed/faculty/" class="section">Faculty</a><ul><li><a href="/biomed/faculty/core/">Core</a></li><li><a href="/biomed/faculty/research/">Research</a></li><li><a href="/biomed/faculty/affiliated/">Affiliated</a></li><li><a href="/biomed/faculty/emeritus/">Emeritus</a></li></ul></li><li class="section"><a href="/biomed/about/" class="section">About</a><ul><li><a href="/biomed/about/faculty-message/">Message from the Faculty</a></li><li><a href="/biomed/about/fast-facts-and-at-a-glance/">Fast Facts</a></li><li><a href="/biomed/about/visitor-information/">Visitor Information</a></li><li><a href="/biomed/about/employment-opportunities/">Employment Opportunities</a></li><li><a href="/biomed/about/contact/">Contact</a></li><li><a href="/biomed/about/make-a-gift/">Make A Gift</a></li></ul></li></ul>
+</nav>
+          </div><!--main-nav-->
+
+</div>
+    </header>
+  </div><!--wrap-->
+</div><!--top-border-->
+<div class="wrap row" >
+    <div id="page" class="one-col home-layout">
+        <div id="bodytag_2_divPanelOne" class="panel-one grid-16">
+            <div id="bodytag_2_panelone_0_divSlideshowWrapper" class="slideshow-wrapper overlay-biomed">
+    <div id="bodytag_2_panelone_0_divSlideshowSlideset" class="slideshow-slideset">
+      <div class="overlay-slide"><img src="/~/media/Images/biomed/slideshow/college-choice.ashx?h=390&w=880&hash=A1DF336D51989D4FFDBCC18B5A8710D33BB830B6" alt="College Choice Best Biomedical Engineering Master's 2017" width="880" height="390" />  <div class="overlay-slide-text"><a class="more-button" href="/biomed/academics/graduate-programs/biomedical-engineering-master-of-science-degree/">Biomedical Engineering Master's Degree</a>  </div></div><div class="overlay-slide"><img src="/~/media/Images/biomed/slideshow/sitecore-slideshow-6.ashx?h=390&w=880&hash=114397233819B3EBCE8A964F20C8C38106C25631" alt="Undergraduate Biomechanics Classroom" width="880" height="390" />  <div class="overlay-slide-text"><a class="more-button" href="/biomed/academics/undergraduate-programs/">Overview of our Undergraduate Programs</a>  </div></div><div class="overlay-slide"><img src="/~/media/Images/biomed/slideshow/slideshow-cip.ashx?h=390&w=880&hash=F01F1FFCE63E5F7D39F74DCA026E24229656EE4E" alt="Translational Design Clinical Immersion Co-op Program" width="880" height="390" />  <div class="overlay-slide-text"><a class="more-button" href="http://drexel.edu/biomed/academics/undergraduate-programs/translational-design-clinical-immersion-co-op/">Learn more about this innovative Co-op program</a>  </div></div><div class="overlay-slide"><img src="/~/media/Images/biomed/slideshow/sitecore-slideshow-4.ashx?h=390&w=880&hash=09E12A6B6D030CAC47CA672421F0FDA58AE1D11E" alt="Graduate Students doing Research in Safety Gear" width="880" height="390" />  <div class="overlay-slide-text"><a class="more-button" href="/biomed/academics/graduate-programs/">Overview of our Graduate Programs</a>  </div></div><div class="overlay-slide"><img src="/~/media/Images/biomed/slideshow/on-campus-main-building.ashx?h=390&w=880&hash=7548C8A391675A6F11221644B1AB53DFB8F4D472" alt="On Campus Historic Drexel Main Building" width="880" height="390" />  <div class="overlay-slide-text"><a class="more-button" href="/biomed/admissions/apply/">Apply to BIOMED</a>  </div></div><div class="overlay-slide"><img src="/~/media/Images/biomed/slideshow/Barros_080806_069-2.ashx?h=390&w=880&hash=AC11EA8E9849F2858E8ACC6EF92ECC506426A68C" alt=" " width="880" height="390" />  <div class="overlay-slide-text"><a class="more-button" href="/biomed/research/">Overview of Our School's Research</a>  </div></div><div class="overlay-slide"><img src="/~/media/Images/biomed/slideshow/LSS-Slide.ashx?h=390&w=880&hash=F61FF4F6890132E824020BD8C52FCD0D4F276F14" alt=" " width="880" height="390" />  <div class="overlay-slide-text"><a class="more-button" href="/~/media/Files/biomed/LSS_Portfolio_ALL_Site_v33.ashx?la=en">View the Life Savings Solutions Portfolio</a>  </div></div><div class="overlay-slide"><img src="/~/media/Images/biomed/slideshow/2015_10_8DreBio04.ashx?h=390&w=880&hash=754566BDDDD5110BE102A5B405E4B229610FDA54" alt="Co-ops working at Implant Research Center" width="880" height="390" />  <div class="overlay-slide-text"><a href="/biomed/academics/undergraduate-programs/co-ops-in-biomedical-engineering/">Explore Co-ops in Biomedical Engineering</a>  </div></div>
+    </div>
+    <div id="bodytag_2_panelone_0_divSlideshowControls" class="slideshow-controls">
+    <div id="prevSlide1" class="slide-left"><a href="#" class="left-arrow">Previous</a></div>
+<div class="slideshow-pager-container" id="Pager1"></div><div id="nextSlide1" class="slide-right"><a href="#" class="right-arrow">Next</a></div>
+
+  </div>
+</div>
+
+    <script language="javascript" type="text/javascript">
+        $(document).ready(function () {
+            DREXEL.slideshow.init();
+
+            $('#bodytag_2_panelone_0_divSlideshowSlideset').cycle({
+                prev: "#prevSlide1",
+                next: "#nextSlide1",
+                pager: "#Pager1",
+                pause: 1,
+                speed: 800,
+                timeout: 8000,
+                startingSlide: 0
+            });
+
+
+        });
+    </script>
+
+<div class="recent-news">
+    <h2>
+        Featured News</h2>
+    <ul>
+
+                <li id="bodytag_2_panelone_1_rptRecentRews_li_0">
+                    <a id="bodytag_2_panelone_1_rptRecentRews_hl_0" href="http://drexel.edu/biomed/news-and-events/news/2018/July/Coulter-Drexel-Translational-Research-Program/">Coulter-Drexel Translational Research Program Continues on Path to Succeed Through 2021 </a>
+                    <p id="bodytag_2_panelone_1_rptRecentRews_pDate_0" class="date">
+                        July 10, 2018</p>
+                </li>
+
+                <li id="bodytag_2_panelone_1_rptRecentRews_li_1">
+                    <a id="bodytag_2_panelone_1_rptRecentRews_hl_1" href="http://drexel.edu/biomed/news-and-events/news/2018/June/2018-Neuroergonomics-Conference/">Studying the Brain at Work: Drexel to Host International Neuroergonomics Conference</a>
+                    <p id="bodytag_2_panelone_1_rptRecentRews_pDate_1" class="date">
+                        June 18, 2018</p>
+                </li>
+
+                <li id="bodytag_2_panelone_1_rptRecentRews_li_2">
+                    <a id="bodytag_2_panelone_1_rptRecentRews_hl_2" href="http://drexel.edu/biomed/news-and-events/news/2018/June/Drexel-Advances-Among-Top-100-Worldwide-Universities-Granted-US-Utility-Patents-in-2017/">Drexel Advances Among Top 100 Worldwide Universities Granted US Utility Patents in 2017</a>
+                    <p id="bodytag_2_panelone_1_rptRecentRews_pDate_2" class="date">
+                        June 6, 2018</p>
+                </li>
+
+    </ul>
+    <p class="more">
+        <a id="bodytag_2_panelone_1_hlArchive" href="/biomed/news-and-events/news/">More News</a>
+    </p>
+</div>
+<div id="bodytag_2_panelone_2_divSnippet" class="highlight-video">
+    <h2>Inside Biomed</h2>
+<a data-options="width:854, height:480" href="https://player.vimeo.com/video/212107890?title=0&amp;byline=0&amp;portrait=0" class="ilightbox-video"><img style="width: 100%; height: auto;" src="/~/media/Images/biomed/email/vimeo-overlay.ashx?la=en" alt="Watch Video Highlights" width="480" height="270" /></a>
+<br />
+<h2>Translational Research</h2>
+<div class="clearfix"><img class="float-right percent-35" style="max-width: 150px;" alt="Coulter-Drexel Translational Research Partnership Program" height="215" width="260" src="/~/media/Images/coulter/WHCF-260.ashx?la=en" /><br />
+<p>The annual grant from the <a href="/biomed/research/translational-research/">Coulter-Drexel Translational Research Partnership</a>&nbsp;program sponsors collaborative translational research projects led by teams of biomedical engineers, clinical researchers and other scientists and engineers.</p>
+<p><a class="more-button" href="/biomed/research/translational-research/">Learn More</a></p>
+</div>
+</div>
+        </div>
+        <div id="bodytag_2_divPanelTwo" class="panel-two grid-8">
+            <div id="bodytag_2_paneltwo_0_divButtonList" class="button-list">
+
+            <ul class="button-list">
+
+            <li>
+                <a id="bodytag_2_paneltwo_0_lvList_hlButton_0" class="button" href="/biomed/academics/overview/">Prospective Students</a>
+            </li>
+
+            <li>
+                <a id="bodytag_2_paneltwo_0_lvList_hlButton_1" class="button" href="/biomed/resources/overview/">Current Students</a>
+            </li>
+
+            <li>
+                <a id="bodytag_2_paneltwo_0_lvList_hlButton_2" class="button" href="/biomed/resources/current-undergraduate/advising/">Undergraduate Advising</a>
+            </li>
+
+            <li>
+                <a id="bodytag_2_paneltwo_0_lvList_hlButton_3" class="button" href="/biomed/news-and-events/events-calendar/seminar-and-thesis-events/summer-term/">Biomed Seminar Schedule</a>
+            </li>
+
+            </ul>
+
+
+</div><div id="bodytag_2_paneltwo_1_divSnippet" class="home-social-media">
+
+    <h2>Connect</h2>
+    <div class="clearfix">
+<div class="facebook">
+<a class="button float-left" href="https://www.facebook.com/DrexelBIOMED">
+<em class="icon-facebook"></em>  Facebook
+</a>
+</div>
+<div class="linkedin">
+<a class="button float-left" href="https://www.linkedin.com/school/drexelbiomed/">
+<em class="icon-linkedin"></em>  Linkedin
+</a>
+</div>
+</div>
+<div class="clearfix">
+<div class="youtube">
+<a class="button float-left" href="https://www.youtube.com/channel/UClsV2DloAXhOQt4xnJFCOag">
+<em class="icon-youtube-play"></em>  Youtube
+</a>
+</div>
+<div class="twitter">
+<a class="button float-left" href="https://twitter.com/drexelbiomed">
+<em class="icon-twitter"></em>  Twitter
+</a>
+</div>
+</div>
+<div class="clearfix">
+<div class="facebook">
+<a class="button float-left" style="background: transparent radial-gradient(circle at 33% 100% , #fed373 4%, #f15245 30%, #d92e7f 62%, #9b36b7 85%, #515ecf) repeat scroll 0% 0%;" href="https://instagram.com/drexelbiomed">
+<em class="icon-instagram"></em>  Instagram
+</a>
+</div>
+<div class="linkedin">
+<a class="button float-left" style="background: #ffc600 none repeat scroll 0% 0%;" href="https://snapchat.com/add/drexelbiomed">
+<em class="fa fa-snapchat-ghost"></em>  Snapchat
+</a>
+</div>
+</div>
+<div class="clearfix">
+<div class="youtube">
+<a class="button float-left" style="background: #07294d none repeat scroll 0% 0%;" href="http://drexel.edu/biomed/about/contact/photo-friday/">
+<em class="fa fa-camera"></em>  Photo Friday
+</a>
+</div>
+</div>
+</div><div id="bodytag_2_paneltwo_2_divUpcomingEvents" class="upcoming-events">
+    <h2 id="bodytag_2_paneltwo_2_h2Title">Upcoming Events</h2>
+
+
+            <p>There are currently no upcoming events.</p>
+
+
+    <p id="bodytag_2_paneltwo_2_pMore" class="more-link">
+        <a id="bodytag_2_paneltwo_2_hlMoreEvents" class="more-button" href="/biomed/news-and-events/events-calendar/">More Events</a>
+    </p>
+</div>
+
+<div id="bodytag_2_paneltwo_3_divSnippet" class="">
+    <a class="twitter-timeline" data-height="360" data-aria-polite="assertive" data-link-color="#2B7BB9" href="https://twitter.com/drexelbiomed">Tweets by drexelbiomed</a> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+</div>
+        </div>
+        <div id="bodytag_2_divPanelThree" class="panel-three grid-16">
+
+        </div>
+        <div id="bodytag_2_divPanelFour" class="panel-four">
+
+        </div>
+        <div id="bodytag_2_divPanelFive" class="panel-five">
+
+        </div>
+        <div id="bodytag_2_divPanelSix" class="panel-six">
+
+        </div>
+        <div id="bodytag_2_divPanelSeven" class="panel-seven">
+
+        </div>
+        <div id="bodytag_2_divPanelEight" class="panel-eight">
+
+        </div>
+        <div id="bodytag_2_divPanelNine" class="panel-nine">
+
+        </div>
+        <div id="bodytag_2_divPanelTen" class="panel-ten">
+
+        </div>
+        <div id="bodytag_2_divPanelEleven" class="panel-eleven">
+
+        </div>
+        <div id="bodytag_2_divPanelTwelve" class="panel-twelve">
+
+        </div>
+    </div>
+</div>
+
+<footer id="footer" class="row alt-footer">
+  <div role="presentation" class="footer-bg"></div>
+  <div class="wrap row">
+    <div class="grid-4 live-it"><a href="/ambitioncantwait/">Live<sup>&reg;</sup> It.</a></div>
+    <div class="grid-15">
+      <ul class="inline">
+                <li><a href="http://drexel.edu/guide/a-z/">A-Z Index</a></li>
+        <li><a href="http://drexel.edu/now/news-media">For Media</a></li>
+        <li><a href="http://drexel.edu/hr/atDrexel/employmentOps/">Careers</a></li>
+        <li><a href="http://drexel.edu/about/privacy-legal/">Privacy &amp; Legal</a></li>
+        <li><a href="http://drexel.edu/about/contact/">Contact</a></li>
+        <li><a href="http://drexel.edu/about/directions/">Directions &amp; Maps</a></li>
+        <li><a href="http://drexel.edu/publicsafety/about/emergency/">Emergency Information</a></li>
+      </ul>
+    </div>
+    <div id="bodytag_3_divSocial" class="grid-4 push-1">
+      <p class="social-label">Follow BIOMED:</p>
+      <ul class="social inline social-blue">
+        <li id="bodytag_3_liFacebook">
+                    <a id="bodytag_3_hlFacebook" href="https://www.facebook.com/DrexelBIOMED"><span class="socialMediaLabel">Facebook</span><span class="icon duicon-facebook" aria-hidden="true"></span></a>
+                </li>
+        <li id="bodytag_3_liTwitter">
+                    <a id="bodytag_3_hlTwitter" href="https://twitter.com/drexelbiomed"><span class="socialMediaLabel">Twitter</span><span class="icon duicon-twitter" aria-hidden="true"></span></a>
+                </li>
+        <li id="bodytag_3_liInstagram">
+                    <a id="bodytag_3_hlInstagram" href="https://instagram.com/drexelbiomed"><span class="socialMediaLabel">Instagram</span><span class="icon duicon-instagram" aria-hidden="true"></span></a>
+                </li>
+        <li id="bodytag_3_liYoutube">
+                    <a id="bodytag_3_hlYoutube" href="https://www.youtube.com/channel/UClsV2DloAXhOQt4xnJFCOag"><span class="socialMediaLabel">YouTube</span><span class="icon duicon-youtube" aria-hidden="true"></span></a>
+                </li>
+
+                <li id="bodytag_3_liLinkedIn">
+                    <a id="bodytag_3_hlLinkedIn" href="https://www.linkedin.com/school/drexelbiomed"><span class="socialMediaLabel">LinkedIn</span><span class="icon duicon-linkedin" aria-hidden="true"></span></a>
+                </li>
+                <li id="bodytag_3_liVimeo">
+                    <a id="bodytag_3_hlVimeo" href="https://vimeo.com/drexelbiomed"><span class="socialMediaLabel">Vimeo</span><span class="icon duicon-vimeo" aria-hidden="true"></span></a>
+                </li>
+      </ul>
+    </div>
+  </div><!--wrap-->
+
+  <nav id="skinny-nav" class="row">
+    <div class="wrap">
+      <p>Drexel University, 3141 Chestnut Street, Philadelphia, PA 19104, <a href="tel:2158952000">215.895.2000</a>, &copy; All Rights Reserved</p>
+    </div><!--wrap-->
+  </nav>
+</footer>
+
+<script>
+    var _gaq = [['_setAccount', 'UA-48789419-1'], ['_trackPageview']];
+    (function (d, t) {
+        var g = d.createElement(t), s = d.getElementsByTagName(t)[0];
+        g.src = ('https:' == location.protocol ? '//ssl' : '//www') + '.google-analytics.com/ga.js';
+        s.parentNode.insertBefore(g, s)
+    } (document, 'script'));
+</script>
+
+
+
+
+<div class="DURemarketing">
+    <!-- Start: Ucomm Codes -->
+    <!-- Facebook Code for Remarketing Tag -->
+    <script>    (function () {
+            var _fbq = window._fbq || (window._fbq = []);
+            if (!_fbq.loaded) {
+                var fbds = document.createElement('script');
+                fbds.async = true;
+                fbds.src = '//connect.facebook.net/en_US/fbds.js';
+                var s = document.getElementsByTagName('script')[0];
+                s.parentNode.insertBefore(fbds, s);
+                _fbq.loaded = true;
+            }
+            _fbq.push(['addPixelId', '756749157715296']);
+        })();
+        window._fbq = window._fbq || [];
+        window._fbq.push(['track', 'PixelInitialized', {}]);
+    </script>
+    <noscript><img height="1" width="1" alt="" style="display:none" src="https://www.facebook.com/tr?id=756749157715296&amp;ev=PixelInitialized" /></noscript>
+
+    <!-- Google Code for Remarketing Tag -->
+    <script type="text/javascript">
+    /* <![CDATA[ */
+    var google_conversion_id = 1002289580;
+    var google_custom_params = window.google_tag_params;
+    var google_remarketing_only = true;
+    /* ]]> */
+    </script>
+    <script type="text/javascript" src="//www.googleadservices.com/pagead/conversion.js">
+    </script>
+    <noscript>
+    <div style="display:inline;">
+    <img height="1" width="1" style="border-style:none;" alt="" src="//googleads.g.doubleclick.net/pagead/viewthroughconversion/1002289580/?value=0&amp;guid=ON&amp;script=0"/>
+    </div>
+    </noscript>
+
+    <!-- End: Ucomm codes -->
+
+    <!-- Start: Law Codes -->
+    <!-- Facebook -->
+    <script>    (function () {
+            var _fbq = window._fbq || (window._fbq = []);
+            if (!_fbq.loaded) {
+                var fbds = document.createElement('script');
+                fbds.async = true;
+                fbds.src = '//connect.facebook.net/en_US/fbds.js';
+                var s = document.getElementsByTagName('script')[0];
+                s.parentNode.insertBefore(fbds, s);
+                _fbq.loaded = true;
+            }
+            _fbq.push(['addPixelId', '748983438510643']);
+        })();
+        window._fbq = window._fbq || [];
+        window._fbq.push(['track', 'PixelInitialized', {}]);
+    </script>
+    <noscript><img height="1" width="1" alt="" style="display:none" src="https://www.facebook.com/tr?id=748983438510643&amp;ev=PixelInitialized" /></noscript>
+
+    <!-- Google Code for Remarketing Tag -->
+    <!--------------------------------------------------
+    Remarketing tags may not be associated with personally identifiable information or placed on pages related to sensitive categories. See more information and instructions on how to setup the tag on: http://google.com/ads/remarketingsetup
+    --------------------------------------------------->
+    <script type="text/javascript">
+    /* <![CDATA[ */
+    var google_conversion_id = 961030198;
+    var google_custom_params = window.google_tag_params;
+    var google_remarketing_only = true;
+    /* ]]> */
+    </script>
+    <script type="text/javascript" src="//www.googleadservices.com/pagead/conversion.js">
+    </script>
+    <noscript>
+    <div style="display:inline;" id="GoogleRemarketingPixel">
+    <img height="1" width="1" style="border-style:none;" alt="" src="//googleads.g.doubleclick.net/pagead/viewthroughconversion/961030198/?value=0&amp;guid=ON&amp;script=0"/>
+    </div>
+    </noscript>
+    <!-- End: Law Codes -->
+</div>
+    </form>
+</body>
+</html>
+
