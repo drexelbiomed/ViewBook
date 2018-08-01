@@ -17,7 +17,7 @@ class NetworkingService {
     let session = URLSession.shared
     
     func getVideos(success: @escaping ([Video]) -> Void) {
-        guard let url = URL(string: "https://drexel.edu/~/media/Files/biomed/videos.json") else { return }
+        guard let url = URL(string: "https://drexel.edu/~/media/Files/biomed/videos-v5.json") else { return }
         let request = URLRequest(url: url)
         
         session.dataTask(with: request) { (data, _, _) in

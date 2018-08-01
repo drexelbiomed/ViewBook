@@ -10,6 +10,7 @@ import UIKit
 
 class VideoCollectionViewController: UIViewController {
     @IBOutlet weak var collectionView: UICollectionView!
+    @IBOutlet weak var layout: UICollectionViewFlowLayout!
     
     var videos = [Video]()
     
@@ -19,6 +20,7 @@ class VideoCollectionViewController: UIViewController {
             self.videos = videos
             self.collectionView.reloadData()
         }
+        
         
     }
 
@@ -54,6 +56,10 @@ extension VideoCollectionViewController: UICollectionViewDataSource {
             return UICollectionViewCell()
         }
         cell.configure(with: videos[indexPath.item])
+        
+        cell.imageView.layer.cornerRadius = 8
+        cell.imageView.layer.masksToBounds = true
+        
         return cell
     }
 }

@@ -14,6 +14,7 @@ class WatchVideoViewController: UIViewController, WKUIDelegate {
     @IBOutlet weak var titleLabel: UILabel!
     @IBOutlet weak var viewForEmbeddingWebView: UIView!
     @IBOutlet weak var imageView: UIImageView!
+    @IBOutlet weak var detailsTextView: UITextView!
     
     var thisVideo: Video?
     var videoId: String?
@@ -39,6 +40,7 @@ class WatchVideoViewController: UIViewController, WKUIDelegate {
         // Do any additional setup after loading the view.
         if let video = thisVideo {
             titleLabel.text = video.title
+            detailsTextView.text = video.details
             videoId = video.id
             video.image { (image) in
                 self.imageView.image = image

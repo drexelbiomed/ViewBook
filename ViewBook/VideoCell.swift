@@ -14,6 +14,7 @@ class VideoCell: UICollectionViewCell {
     
     func configure(with video: Video) {
         titleLabel.text = video.title
+        
         video.image { (image) in
             self.imageView.image = image
         }
@@ -23,4 +24,18 @@ class VideoCell: UICollectionViewCell {
         titleLabel.text = nil
         imageView.image = nil
     }
+    
+//    override func preferredLayoutAttributesFitting(_ layoutAttributes: UICollectionViewLayoutAttributes) -> UICollectionViewLayoutAttributes {
+//        setNeedsLayout()
+//        layoutIfNeeded()
+//
+//        let size = contentView.systemLayoutSizeFitting(layoutAttributes.size)
+//        print("width: \(size.width), height: \(size.height)")
+//
+//        var frame = layoutAttributes.frame
+//        frame.size.height = ceil(size.height)
+//        layoutAttributes.frame = frame
+//
+//        return layoutAttributes
+//    }
 }

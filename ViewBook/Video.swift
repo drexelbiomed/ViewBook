@@ -12,10 +12,12 @@ import UIKit
 struct Video: Codable {
     let title: String
     let id: String
+    let details: String
 
     enum CodingKeys: String, CodingKey {
         case title = "title"
         case id = "id"
+        case details = "details"
     }
     
     func image(completion: @escaping (UIImage) -> Void) {
