@@ -154,7 +154,7 @@
                                     <constraint firstAttribute="width" secondItem="LU3-UG-j5G" secondAttribute="height" multiplier="16:9" id="CsH-AZ-JFL"/>
                                 </constraints>
                             </imageView>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="4Wx-oY-HAE">
+                            <view contentMode="scaleAspectFill" translatesAutoresizingMaskIntoConstraints="NO" id="4Wx-oY-HAE">
                                 <rect key="frame" x="0.0" y="64" width="375" height="211"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="4Wx-oY-HAE" secondAttribute="height" multiplier="16:9" id="fWf-jR-EIN"/>
