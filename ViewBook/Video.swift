@@ -13,11 +13,15 @@ struct Video: Codable {
     let title: String
     let id: String
     let details: String
+    let linkTitle: String?
+    let linkUrl: String?
 
     enum CodingKeys: String, CodingKey {
         case title = "title"
         case id = "id"
         case details = "details"
+        case linkTitle = "link_title"
+        case linkUrl = "link_url"
     }
     
     func image(completion: @escaping (UIImage) -> Void) {

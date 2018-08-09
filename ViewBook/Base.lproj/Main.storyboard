@@ -73,7 +73,7 @@
                                                     </constraints>
                                                 </imageView>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="none" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="AsU-FV-LXz">
-                                                    <rect key="frame" x="10" y="179" width="280" height="50"/>
+                                                    <rect key="frame" x="10" y="179" width="280" height="51"/>
                                                     <constraints>
                                                         <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="20" id="D2Y-IZ-dXE"/>
                                                     </constraints>
@@ -160,54 +160,48 @@
                                     <constraint firstAttribute="width" secondItem="4Wx-oY-HAE" secondAttribute="height" multiplier="16:9" id="fWf-jR-EIN"/>
                                 </constraints>
                             </view>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PCh-uH-v0g">
-                                <rect key="frame" x="20" y="291" width="339" height="20.5"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="20" id="5JD-8m-MLg"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" style="UICTFontTextStyleHeadline"/>
-                                <color key="textColor" red="0.0" green="0.37969619035720825" blue="0.60400527715682983" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" textAlignment="natural" adjustsFontForContentSizeCategory="YES" translatesAutoresizingMaskIntoConstraints="NO" id="xDZ-Tp-PbX">
-                                <rect key="frame" x="16" y="319" width="343" height="328"/>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" bouncesZoom="NO" editable="NO" usesAttributedText="YES" adjustsFontForContentSizeCategory="YES" translatesAutoresizingMaskIntoConstraints="NO" id="xDZ-Tp-PbX">
+                                <rect key="frame" x="16" y="291" width="343" height="356"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
-                                <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <fontDescription key="fontDescription" style="UICTFontTextStyleBody"/>
+                                <attributedString key="attributedText">
+                                    <fragment>
+                                        <string key="content">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
+                                        <attributes>
+                                            <color key="NSColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            <font key="NSFont" metaFont="system" size="17"/>
+                                        </attributes>
+                                    </fragment>
+                                </attributedString>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="words"/>
+                                <dataDetectorType key="dataDetectorTypes" phoneNumber="YES" link="YES" address="YES" calendarEvent="YES"/>
                             </textView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="4Wx-oY-HAE" firstAttribute="leading" secondItem="XDg-SG-2qh" secondAttribute="leading" id="4Sy-d8-Nke"/>
-                            <constraint firstItem="PCh-uH-v0g" firstAttribute="top" secondItem="4Wx-oY-HAE" secondAttribute="bottom" constant="16" id="ABA-bg-LkD"/>
                             <constraint firstItem="4Wx-oY-HAE" firstAttribute="trailing" secondItem="XDg-SG-2qh" secondAttribute="trailing" id="EhN-HB-Bvd"/>
+                            <constraint firstItem="xDZ-Tp-PbX" firstAttribute="top" secondItem="LU3-UG-j5G" secondAttribute="bottom" constant="16" id="Od0-T4-Asd"/>
                             <constraint firstItem="LU3-UG-j5G" firstAttribute="centerX" secondItem="XDg-SG-2qh" secondAttribute="centerX" id="WyZ-KM-DhO"/>
                             <constraint firstItem="LU3-UG-j5G" firstAttribute="top" secondItem="XDg-SG-2qh" secondAttribute="top" id="ZqJ-Hg-7bh"/>
                             <constraint firstItem="xDZ-Tp-PbX" firstAttribute="leading" secondItem="XDg-SG-2qh" secondAttribute="leading" constant="16" id="bQQ-cn-vmX"/>
                             <constraint firstItem="LU3-UG-j5G" firstAttribute="leading" secondItem="XDg-SG-2qh" secondAttribute="leading" id="hMq-KJ-VPr"/>
                             <constraint firstItem="4Wx-oY-HAE" firstAttribute="top" secondItem="XDg-SG-2qh" secondAttribute="top" id="kYr-wR-cBf"/>
-                            <constraint firstItem="PCh-uH-v0g" firstAttribute="leading" secondItem="XDg-SG-2qh" secondAttribute="leading" constant="20" id="ofg-oo-l48"/>
-                            <constraint firstItem="xDZ-Tp-PbX" firstAttribute="top" secondItem="PCh-uH-v0g" secondAttribute="bottom" constant="8" id="qEI-w2-VYO"/>
                             <constraint firstItem="XDg-SG-2qh" firstAttribute="trailing" secondItem="xDZ-Tp-PbX" secondAttribute="trailing" constant="16" id="rYP-gz-GBb"/>
                             <constraint firstItem="XDg-SG-2qh" firstAttribute="trailing" secondItem="LU3-UG-j5G" secondAttribute="trailing" id="s2T-dw-zbl"/>
                             <constraint firstItem="XDg-SG-2qh" firstAttribute="bottom" secondItem="xDZ-Tp-PbX" secondAttribute="bottom" constant="20" id="v2y-id-JX1"/>
                             <constraint firstItem="4Wx-oY-HAE" firstAttribute="centerX" secondItem="XDg-SG-2qh" secondAttribute="centerX" id="xbo-v1-PdP"/>
-                            <constraint firstItem="XDg-SG-2qh" firstAttribute="trailing" secondItem="PCh-uH-v0g" secondAttribute="trailing" constant="16" id="zdZ-QV-ANl"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="XDg-SG-2qh"/>
                     </view>
                     <connections>
                         <outlet property="detailsTextView" destination="xDZ-Tp-PbX" id="Qyh-sH-obZ"/>
                         <outlet property="imageView" destination="LU3-UG-j5G" id="Ngs-ag-oeM"/>
-                        <outlet property="titleLabel" destination="PCh-uH-v0g" id="n2D-vN-3YO"/>
                         <outlet property="viewForEmbeddingWebView" destination="4Wx-oY-HAE" id="hov-ke-H6l"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="k8d-ZO-twv" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1971.5" y="-161.5"/>
+            <point key="canvasLocation" x="1970.4000000000001" y="-162.3688155922039"/>
         </scene>
     </scenes>
 </document>
