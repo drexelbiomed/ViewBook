@@ -148,18 +148,20 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="LU3-UG-j5G">
-                                <rect key="frame" x="0.0" y="64" width="375" height="211"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" secondItem="LU3-UG-j5G" secondAttribute="height" multiplier="16:9" id="CsH-AZ-JFL"/>
-                                </constraints>
-                            </imageView>
-                            <view contentMode="scaleAspectFill" translatesAutoresizingMaskIntoConstraints="NO" id="4Wx-oY-HAE">
+                            <view opaque="NO" contentMode="scaleAspectFill" translatesAutoresizingMaskIntoConstraints="NO" id="4Wx-oY-HAE">
                                 <rect key="frame" x="0.0" y="64" width="375" height="211"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="4Wx-oY-HAE" secondAttribute="height" multiplier="16:9" id="fWf-jR-EIN"/>
                                 </constraints>
                             </view>
+                            <imageView userInteractionEnabled="NO" alpha="0.80000000000000004" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="LU3-UG-j5G">
+                                <rect key="frame" x="0.0" y="64" width="375" height="211"/>
+                                <color key="backgroundColor" red="0.039215687659999998" green="0.16862745579999999" blue="0.32941177490000001" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="tintColor" red="0.039215687659999998" green="0.16862745579999999" blue="0.32941177490000001" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="LU3-UG-j5G" secondAttribute="height" multiplier="16:9" id="CsH-AZ-JFL"/>
+                                </constraints>
+                            </imageView>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" bouncesZoom="NO" editable="NO" usesAttributedText="YES" adjustsFontForContentSizeCategory="YES" translatesAutoresizingMaskIntoConstraints="NO" id="xDZ-Tp-PbX">
                                 <rect key="frame" x="16" y="291" width="343" height="356"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -175,17 +177,23 @@
                                 <textInputTraits key="textInputTraits" autocapitalizationType="words"/>
                                 <dataDetectorType key="dataDetectorTypes" phoneNumber="YES" link="YES" address="YES" calendarEvent="YES"/>
                             </textView>
+                            <activityIndicatorView opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" animating="YES" style="whiteLarge" translatesAutoresizingMaskIntoConstraints="NO" id="IBU-VG-Bkf">
+                                <rect key="frame" x="169" y="151" width="37" height="37"/>
+                                <color key="color" red="0.99607843159999998" green="0.74117648599999997" blue="0.054901961239999998" alpha="1" colorSpace="calibratedRGB"/>
+                            </activityIndicatorView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="4Wx-oY-HAE" firstAttribute="leading" secondItem="XDg-SG-2qh" secondAttribute="leading" id="4Sy-d8-Nke"/>
                             <constraint firstItem="4Wx-oY-HAE" firstAttribute="trailing" secondItem="XDg-SG-2qh" secondAttribute="trailing" id="EhN-HB-Bvd"/>
+                            <constraint firstItem="IBU-VG-Bkf" firstAttribute="centerY" secondItem="LU3-UG-j5G" secondAttribute="centerY" id="OWC-By-EYE"/>
                             <constraint firstItem="xDZ-Tp-PbX" firstAttribute="top" secondItem="LU3-UG-j5G" secondAttribute="bottom" constant="16" id="Od0-T4-Asd"/>
                             <constraint firstItem="LU3-UG-j5G" firstAttribute="centerX" secondItem="XDg-SG-2qh" secondAttribute="centerX" id="WyZ-KM-DhO"/>
                             <constraint firstItem="LU3-UG-j5G" firstAttribute="top" secondItem="XDg-SG-2qh" secondAttribute="top" id="ZqJ-Hg-7bh"/>
                             <constraint firstItem="xDZ-Tp-PbX" firstAttribute="leading" secondItem="XDg-SG-2qh" secondAttribute="leading" constant="16" id="bQQ-cn-vmX"/>
                             <constraint firstItem="LU3-UG-j5G" firstAttribute="leading" secondItem="XDg-SG-2qh" secondAttribute="leading" id="hMq-KJ-VPr"/>
                             <constraint firstItem="4Wx-oY-HAE" firstAttribute="top" secondItem="XDg-SG-2qh" secondAttribute="top" id="kYr-wR-cBf"/>
+                            <constraint firstItem="IBU-VG-Bkf" firstAttribute="centerX" secondItem="LU3-UG-j5G" secondAttribute="centerX" id="lR2-pH-cbL"/>
                             <constraint firstItem="XDg-SG-2qh" firstAttribute="trailing" secondItem="xDZ-Tp-PbX" secondAttribute="trailing" constant="16" id="rYP-gz-GBb"/>
                             <constraint firstItem="XDg-SG-2qh" firstAttribute="trailing" secondItem="LU3-UG-j5G" secondAttribute="trailing" id="s2T-dw-zbl"/>
                             <constraint firstItem="XDg-SG-2qh" firstAttribute="bottom" secondItem="xDZ-Tp-PbX" secondAttribute="bottom" constant="20" id="v2y-id-JX1"/>
@@ -196,6 +204,7 @@
                     <connections>
                         <outlet property="detailsTextView" destination="xDZ-Tp-PbX" id="Qyh-sH-obZ"/>
                         <outlet property="imageView" destination="LU3-UG-j5G" id="Ngs-ag-oeM"/>
+                        <outlet property="loader" destination="IBU-VG-Bkf" id="dMF-MQ-7Jv"/>
                         <outlet property="viewForEmbeddingWebView" destination="4Wx-oY-HAE" id="hov-ke-H6l"/>
                     </connections>
                 </viewController>

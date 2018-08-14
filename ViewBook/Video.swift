@@ -10,6 +10,7 @@ import Foundation
 import UIKit
 
 struct Video: Codable {
+    let category: String
     let title: String
     let id: String
     let details: String
@@ -17,6 +18,7 @@ struct Video: Codable {
     let linkUrl: String?
 
     enum CodingKeys: String, CodingKey {
+        case category = "category"
         case title = "title"
         case id = "id"
         case details = "details"
