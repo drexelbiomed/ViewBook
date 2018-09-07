@@ -86,7 +86,8 @@ class WatchVideoViewController: UIViewController, WKUIDelegate {
             end = content.length
             content.replaceCharacters(in: NSMakeRange(end, 0), with: "\n")
             content.append(linkAttrString)
-            
+            end = content.length
+            content.replaceCharacters(in: NSMakeRange(end, 0), with: "\n")
 
             // update end length
             end = content.length
