@@ -48,7 +48,7 @@ class VideoTableViewController: UIViewController, UITableViewDataSource, UITable
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         print("got here 2")
         let tcell = tableView.dequeueReusableCell(withIdentifier: "VideoTableViewCell", for: indexPath) as! VideoTableViewCell
-        tcell.videos = videos
+        tcell.videos = videos[indexPath.section]
 
         return tcell
     }
