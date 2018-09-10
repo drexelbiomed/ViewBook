@@ -10,7 +10,7 @@ import UIKit
 
 class VideoTableViewCell: UITableViewCell, UICollectionViewDataSource  {
     @IBOutlet weak var videoCollectionView: UICollectionView!
-    var videos: [[Video]] = []
+    var videos: [Video] = []
 
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -33,14 +33,14 @@ class VideoTableViewCell: UITableViewCell, UICollectionViewDataSource  {
     }
 
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return videos[section].count
+        return videos.count
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "VideoCell", for: indexPath) as? VideoCell else {
             return UICollectionViewCell()
         }
-        cell.configure(with: videos[indexPath.section][indexPath.item])
+        cell.configure(with: videos[indexPath.item])
         cell.imageView.layer.cornerRadius = 8
         cell.imageView.layer.masksToBounds = true
         return cell
