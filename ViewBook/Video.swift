@@ -45,6 +45,12 @@ struct Video: Codable {
         embedUrl = "https://www.youtube.com/embed/\(self.id)?playsinline=1&showinfo=0&rel=0"
         completion(embedUrl)
     }
-    
-    
+}
+
+extension Video: Equatable {
+    static func == (lhs: Video, rhs: Video) -> Bool {
+        return lhs.id == rhs.id &&
+                lhs.title == rhs.title &&
+                lhs.category == rhs.category
+    }
 }

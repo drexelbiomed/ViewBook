@@ -8,8 +8,8 @@
 
 import UIKit
 
-class VideoTableViewCell: UITableViewCell, UICollectionViewDataSource  {
-    @IBOutlet weak var videoCollectionView: UICollectionView!
+class VideoTableViewCell: UITableViewCell, UICollectionViewDataSource, UICollectionViewDelegate  {
+    @IBOutlet private weak var videoCollectionView: UICollectionView!
     var videos: [Video] = []
 
     override func awakeFromNib() {
@@ -45,4 +45,15 @@ class VideoTableViewCell: UITableViewCell, UICollectionViewDataSource  {
         cell.imageView.layer.masksToBounds = true
         return cell
     }
+    
+    func setCollectionViewDataSourceDelegate
+        <D: UICollectionViewDataSource & UICollectionViewDelegate>
+        (dataSourceDelegate: D, forRow row: Int) {
+        
+        videoCollectionView.delegate = dataSourceDelegate
+        videoCollectionView.dataSource = dataSourceDelegate
+        videoCollectionView.tag = row
+        videoCollectionView.reloadData()
+    }
+    
 }

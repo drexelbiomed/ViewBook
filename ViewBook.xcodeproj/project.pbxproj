@@ -23,6 +23,7 @@
 		5569337C20FD2AE4005B2AD7 /* Video.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5569337B20FD2AE4005B2AD7 /* Video.swift */; };
 		5569337E20FD2BF9005B2AD7 /* MyError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5569337D20FD2BF9005B2AD7 /* MyError.swift */; };
 		557D7F0A2107D76900649A4F /* ImageCache.swift in Sources */ = {isa = PBXBuildFile; fileRef = 557D7F092107D76900649A4F /* ImageCache.swift */; };
+		559F027321482F47000EE8BA /* CustomTableViewHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 559F027221482F47000EE8BA /* CustomTableViewHeader.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -44,6 +45,7 @@
 		5569337B20FD2AE4005B2AD7 /* Video.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Video.swift; sourceTree = "<group>"; };
 		5569337D20FD2BF9005B2AD7 /* MyError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyError.swift; sourceTree = "<group>"; };
 		557D7F092107D76900649A4F /* ImageCache.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageCache.swift; sourceTree = "<group>"; };
+		559F027221482F47000EE8BA /* CustomTableViewHeader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTableViewHeader.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -87,6 +89,7 @@
 				554912F620FD19F500253C55 /* VideoCell.swift */,
 				554912F820FD1B0D00253C55 /* VideoCollectionViewController.swift */,
 				5526C895214302FC0036ADF7 /* VideoTableViewController.swift */,
+				559F027221482F47000EE8BA /* CustomTableViewHeader.swift */,
 				5526C8972143055A0036ADF7 /* VideoTableViewCell.swift */,
 				5541C2332108C83600253B1E /* WatchVideoViewController.swift */,
 				554912E420FCFD8700253C55 /* ViewController.swift */,
@@ -181,6 +184,7 @@
 				5569337C20FD2AE4005B2AD7 /* Video.swift in Sources */,
 				5526C8942141B3FB0036ADF7 /* VideoCollectionHeaderView.swift in Sources */,
 				554912F920FD1B0D00253C55 /* VideoCollectionViewController.swift in Sources */,
+				559F027321482F47000EE8BA /* CustomTableViewHeader.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

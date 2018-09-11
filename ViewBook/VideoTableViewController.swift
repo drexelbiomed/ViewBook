@@ -8,9 +8,10 @@
 
 import UIKit
 
-class VideoTableViewController: UIViewController, UITableViewDataSource, UITableViewDelegate  {
+class VideoTableViewController: UIViewController, UITableViewDataSource, UITableViewDelegate, UICollectionViewDelegate, UICollectionViewDataSource {
     @IBOutlet var tableView: UITableView!
     var videos = [[Video]]()
+    var selected: Video?
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -18,12 +19,7 @@ class VideoTableViewController: UIViewController, UITableViewDataSource, UITable
             self.videos = VideoCollection(videos: videos).videosByCategory()
             self.tableView.reloadData()
         }
-
-        // Uncomment the following line to preserve selection between presentations
-        // self.clearsSelectionOnViewWillAppear = false
-
-        // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
-        // self.navigationItem.rightBarButtonItem = self.editButtonItem
+        self.tableView.register(CustomTableViewHeader.self, forHeaderFooterViewReuseIdentifier: CustomTableViewHeader.reuseIdentifer)
     }
 
     override func didReceiveMemoryWarning() {
@@ -35,67 +31,67 @@ class VideoTableViewController: UIViewController, UITableViewDataSource, UITable
 
     func numberOfSections(in tableView: UITableView) -> Int {
         // #warning Incomplete implementation, return the number of sections
-        print("got here 4")
         return videos.count
     }
 
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
-        print("got here 3")
         return 1
     }
 
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        print("got here 2")
         let tcell = tableView.dequeueReusableCell(withIdentifier: "VideoTableViewCell", for: indexPath) as! VideoTableViewCell
         tcell.videos = videos[indexPath.section]
 
         return tcell
     }
-
-    /*
-    // Override to support conditional editing of the table view.
-    override func tableView(_ tableView: UITableView, canEditRowAt indexPath: IndexPath) -> Bool {
-        // Return false if you do not want the specified item to be editable.
-        return true
+    
+    func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
+        if let header = tableView.dequeueReusableHeaderFooterView(withIdentifier: CustomTableViewHeader.reuseIdentifer) as? CustomTableViewHeader {
+            header.customLabel.text = videos[section][0].category
+            return header
+        }
+        return nil
     }
-    */
-
-    /*
-    // Override to support editing the table view.
-    override func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCellEditingStyle, forRowAt indexPath: IndexPath) {
-        if editingStyle == .delete {
-            // Delete the row from the data source
-            tableView.deleteRows(at: [indexPath], with: .fade)
-        } else if editingStyle == .insert {
-            // Create a new instance of the appropriate class, insert it into the array, and add a new row to the table view
-        }    
+    
+    func tableView(_ tableView: UITableView, willDisplay cell: UITableViewCell, forRowAt indexPath: IndexPath) {
+        guard let tableViewCell = cell as? VideoTableViewCell else { return }
+        print(indexPath.section)
+        tableViewCell.setCollectionViewDataSourceDelegate(dataSourceDelegate: self, forRow: indexPath.section)
     }
-    */
-
-    /*
-    // Override to support rearranging the table view.
-    override func tableView(_ tableView: UITableView, moveRowAt fromIndexPath: IndexPath, to: IndexPath) {
-
+    
+    // MARK: - Collection view data source
+    
+    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+        return videos.count
     }
-    */
-
-    /*
-    // Override to support conditional rearranging of the table view.
-    override func tableView(_ tableView: UITableView, canMoveRowAt indexPath: IndexPath) -> Bool {
-        // Return false if you do not want the item to be re-orderable.
-        return true
+    
+    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "VideoCell", for: indexPath)
+        return cell
     }
-    */
 
-    /*
     // MARK: - Navigation
 
     // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
+     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+     // Get the new view controller using segue.destinationViewController.
+        if segue.identifier == "watchVideoSegue" {
+            if let cell = sender as? VideoCell {
+                if let collectionView = cell.superview as? UICollectionView {
+                    if let destination = segue.destination as? WatchVideoViewController {
+                        let row = videos[collectionView.tag]
+                        let index = row.index(where: {$0.title == cell.titleLabel.text})
+                        if let index = index {
+                            destination.thisVideo = videos[collectionView.tag][index]
+                        }
+                    }
+                }
+            }
+        }
+//            let indexPath = self.collectionView.indexPath(for: cell) {
+//             let vc = segue.destination as! WatchVideoViewController
+//             vc.thisVideo = videos[indexPath.section][indexPath.item]
     }
-    */
-
+//      Pass the selected object to the new view controller.
 }
