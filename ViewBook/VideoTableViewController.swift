@@ -49,9 +49,15 @@ class VideoTableViewController: UIViewController, UITableViewDataSource, UITable
     func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
         if let header = tableView.dequeueReusableHeaderFooterView(withIdentifier: CustomTableViewHeader.reuseIdentifer) as? CustomTableViewHeader {
             header.customLabel.text = videos[section][0].category
+            header.contentView.backgroundColor = UIColor.white
+            header.customLabel.textColor = #colorLiteral(red: 0.02727892995, green: 0.2292442918, blue: 0.4042541981, alpha: 1)
             return header
         }
         return nil
+    }
+    
+    func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
+        return 45
     }
     
     func tableView(_ tableView: UITableView, willDisplay cell: UITableViewCell, forRowAt indexPath: IndexPath) {

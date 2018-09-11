@@ -16,7 +16,7 @@ class CustomTableViewHeader: UITableViewHeaderFooterView {
     override public init(reuseIdentifier: String?) {
         super.init(reuseIdentifier: reuseIdentifier)
         
-        customLabel.font = UIFont.preferredFont(forTextStyle: .title1)
+        customLabel.font = UIFont.preferredFont(forTextStyle: .title2)
         
         customLabel.translatesAutoresizingMaskIntoConstraints = false
         self.contentView.addSubview(customLabel)
