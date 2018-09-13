@@ -2,6 +2,6 @@
 <Workspace
    version = "1.0">
    <FileRef
-      location = "self:ViewBook.xcodeproj">
+      location = "self:/Users/Dave/src/ViewBook/Drexel Biomed.xcodeproj">
    </FileRef>
 </Workspace>

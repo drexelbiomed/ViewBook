@@ -42,18 +42,18 @@ class WatchVideoViewController: UIViewController, WKUIDelegate {
             // init attributed strings
             let headlineAttrString = NSMutableAttributedString(string: video.title, attributes: [
                 .font: UIFont.preferredFont(forTextStyle: .title1),
-                .foregroundColor: UIColor(red: 0.0, green: 102.0/255, blue: 153.0/255, alpha: 1.0)
+                .foregroundColor: #colorLiteral(red: 0.02727892995, green: 0.2292442918, blue: 0.4042541981, alpha: 1)
                 ])
             let subHeadlineAttrString = NSMutableAttributedString(string: video.category, attributes: [
                 .font: UIFont.preferredFont(forTextStyle: .title2),
-                .foregroundColor: UIColor(red: 0.0, green: 102.0/255, blue: 153.0/255, alpha: 1.0)
+                .foregroundColor: #colorLiteral(red: 0.2549019754, green: 0.2745098174, blue: 0.3019607961, alpha: 1)
                 ])
             let bodyAttrString = NSMutableAttributedString(string: video.details, attributes: [
                 .font: UIFont.preferredFont(forTextStyle: .body)
                 ])
             let linkAttrString = NSMutableAttributedString(string: "→ \(video.linkTitle!)", attributes: [
                 .font: UIFont.preferredFont(forTextStyle: .headline),
-                .foregroundColor: UIColor(red: 7.0/255, green: 41.0/255, blue: 77.0/255, alpha: 1.0)
+                .foregroundColor: #colorLiteral(red: 0.1411764771, green: 0.3960784376, blue: 0.5647059083, alpha: 1)
                 ])
             linkAttrString.addAttribute(.link, value: video.linkUrl!, range: NSMakeRange(0, linkAttrString.length))
             

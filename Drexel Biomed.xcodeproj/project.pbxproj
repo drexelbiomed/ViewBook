@@ -22,6 +22,9 @@
 		5569337E20FD2BF9005B2AD7 /* MyError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5569337D20FD2BF9005B2AD7 /* MyError.swift */; };
 		557D7F0A2107D76900649A4F /* ImageCache.swift in Sources */ = {isa = PBXBuildFile; fileRef = 557D7F092107D76900649A4F /* ImageCache.swift */; };
 		559F027321482F47000EE8BA /* CustomTableViewHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 559F027221482F47000EE8BA /* CustomTableViewHeader.swift */; };
+		559F027521497FAD000EE8BA /* NewsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 559F027421497FAD000EE8BA /* NewsTableViewController.swift */; };
+		559F027B2149833E000EE8BA /* NewsModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 559F027A2149833E000EE8BA /* NewsModel.swift */; };
+		559F027D2149A0EF000EE8BA /* NewsCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 559F027C2149A0EF000EE8BA /* NewsCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -42,6 +45,9 @@
 		5569337D20FD2BF9005B2AD7 /* MyError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyError.swift; sourceTree = "<group>"; };
 		557D7F092107D76900649A4F /* ImageCache.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageCache.swift; sourceTree = "<group>"; };
 		559F027221482F47000EE8BA /* CustomTableViewHeader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTableViewHeader.swift; sourceTree = "<group>"; };
+		559F027421497FAD000EE8BA /* NewsTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsTableViewController.swift; sourceTree = "<group>"; };
+		559F027A2149833E000EE8BA /* NewsModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NewsModel.swift; sourceTree = "<group>"; };
+		559F027C2149A0EF000EE8BA /* NewsCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -83,6 +89,9 @@
 				5526C88F214181BF0036ADF7 /* VideoCollection.swift */,
 				554912F620FD19F500253C55 /* VideoCell.swift */,
 				5526C895214302FC0036ADF7 /* VideoTableViewController.swift */,
+				559F027421497FAD000EE8BA /* NewsTableViewController.swift */,
+				559F027A2149833E000EE8BA /* NewsModel.swift */,
+				559F027C2149A0EF000EE8BA /* NewsCell.swift */,
 				559F027221482F47000EE8BA /* CustomTableViewHeader.swift */,
 				5526C8972143055A0036ADF7 /* VideoTableViewCell.swift */,
 				5541C2332108C83600253B1E /* WatchVideoViewController.swift */,
@@ -129,7 +138,7 @@
 					};
 				};
 			};
-			buildConfigurationList = 554912DA20FCFD8700253C55 /* Build configuration list for PBXProject "ViewBook" */;
+			buildConfigurationList = 554912DA20FCFD8700253C55 /* Build configuration list for PBXProject "Drexel Biomed" */;
 			compatibilityVersion = "Xcode 9.3";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -165,13 +174,16 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				559F027B2149833E000EE8BA /* NewsModel.swift in Sources */,
 				5569337E20FD2BF9005B2AD7 /* MyError.swift in Sources */,
 				5526C8982143055A0036ADF7 /* VideoTableViewCell.swift in Sources */,
 				5541C2342108C83600253B1E /* WatchVideoViewController.swift in Sources */,
 				554912F720FD19F500253C55 /* VideoCell.swift in Sources */,
+				559F027D2149A0EF000EE8BA /* NewsCell.swift in Sources */,
 				557D7F0A2107D76900649A4F /* ImageCache.swift in Sources */,
 				554912FB20FD1CDC00253C55 /* NeworkingService.swift in Sources */,
 				554912E520FCFD8700253C55 /* ViewController.swift in Sources */,
+				559F027521497FAD000EE8BA /* NewsTableViewController.swift in Sources */,
 				554912E320FCFD8700253C55 /* AppDelegate.swift in Sources */,
 				5526C896214302FC0036ADF7 /* VideoTableViewController.swift in Sources */,
 				5526C890214181C00036ADF7 /* VideoCollection.swift in Sources */,
@@ -355,7 +367,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		554912DA20FCFD8700253C55 /* Build configuration list for PBXProject "ViewBook" */ = {
+		554912DA20FCFD8700253C55 /* Build configuration list for PBXProject "Drexel Biomed" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				554912EF20FCFD8800253C55 /* Debug */,
