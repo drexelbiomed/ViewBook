@@ -18,7 +18,7 @@ class NewsTableViewController: UIViewController, UITableViewDataSource, UITableV
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        let urlString = "https://drexel.edu/biomed/news-and-events/rss"
+        let urlString = "https://drexel.edu/biomed/resources/faculty-and-staff/rss"
         beginParsing(urlString: urlString)
 
         // Uncomment the following line to preserve selection between presentations

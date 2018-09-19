@@ -17,12 +17,12 @@ class NewsCell: UITableViewCell {
     }
     
     func configure(with news: NewsRow) {
-        let headlineAttrString = NSMutableAttributedString(string: news.headline, attributes: [.font: UIFont.preferredFont(forTextStyle: .headline), .foregroundColor: #colorLiteral(red: 0.02727892995, green: 0.2292442918, blue: 0.4042541981, alpha: 1)])
+        let headlineAttrString = NSMutableAttributedString(string: strip(string: news.headline), attributes: [.font: UIFont.preferredFont(forTextStyle: .headline), .foregroundColor: #colorLiteral(red: 0.02727892995, green: 0.2292442918, blue: 0.4042541981, alpha: 1)])
         let pubDateAttrString = NSMutableAttributedString(string: news.pubDate, attributes: [
             .font: UIFont.preferredFont(forTextStyle: .caption1),
             .foregroundColor: #colorLiteral(red: 0.2549019754, green: 0.2745098174, blue: 0.3019607961, alpha: 1)
             ])
-        let summaryAttrString = NSMutableAttributedString(string: news.summary, attributes: [
+        let summaryAttrString = NSMutableAttributedString(string: strip(string: news.summary), attributes: [
             .font: UIFont.preferredFont(forTextStyle: .body)
             ])
         let linkAttrString = NSMutableAttributedString(string: "→ Read More", attributes: [
@@ -31,7 +31,7 @@ class NewsCell: UITableViewCell {
             ])
         linkAttrString.addAttribute(.link, value: news.link, range: NSMakeRange(0, linkAttrString.length))
         
-        let attrStringArray = [headlineAttrString, pubDateAttrString, summaryAttrString, linkAttrString]
+        let attrStringArray = [pubDateAttrString, headlineAttrString, summaryAttrString, linkAttrString]
         
         let paragraphStyle = NSMutableParagraphStyle()
         paragraphStyle.headIndent = 0
@@ -61,6 +61,10 @@ class NewsCell: UITableViewCell {
         super.setSelected(selected, animated: animated)
 
         // Configure the view for the selected state
+    }
+    
+    func strip (string: String) -> String {
+        return string.replacingOccurrences(of: "<[^>]+>", with: "", options: .regularExpression, range: nil)
     }
 
 }

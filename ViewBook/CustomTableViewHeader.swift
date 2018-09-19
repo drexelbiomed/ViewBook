@@ -11,24 +11,30 @@ import UIKit
 class CustomTableViewHeader: UITableViewHeaderFooterView {
 
     static let reuseIdentifer = "CustomHeaderReuseIdentifier"
-    let customLabel = UILabel.init()
+    let label = UILabel.init()
+    let font = UIFont.preferredFont(forTextStyle: .headline)
     
     override public init(reuseIdentifier: String?) {
         super.init(reuseIdentifier: reuseIdentifier)
-        
-        customLabel.font = UIFont.preferredFont(forTextStyle: .title2)
-        
-        customLabel.translatesAutoresizingMaskIntoConstraints = false
-        self.contentView.addSubview(customLabel)
+        label.translatesAutoresizingMaskIntoConstraints = false
+        self.contentView.addSubview(label)
         
         let margins = contentView.layoutMarginsGuide
-        customLabel.leadingAnchor.constraint(equalTo: margins.leadingAnchor).isActive = true
-        customLabel.trailingAnchor.constraint(equalTo: margins.trailingAnchor).isActive = true
-        customLabel.topAnchor.constraint(equalTo: margins.topAnchor).isActive = true
-        customLabel.bottomAnchor.constraint(equalTo: margins.bottomAnchor).isActive = true
+        label.leadingAnchor.constraint(equalTo: margins.leadingAnchor).isActive = true
+        label.trailingAnchor.constraint(equalTo: margins.trailingAnchor).isActive = true
+        label.topAnchor.constraint(equalTo: margins.topAnchor).isActive = true
+        label.bottomAnchor.constraint(equalTo: margins.bottomAnchor).isActive = true
     }
     
     required init?(coder aDecoder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
+    }
+    
+    func rectForText(text: String, maxSize: CGSize) -> CGSize {
+        let attrString = NSAttributedString.init(string: text, attributes: [.font
+            : font])
+        let rect = attrString.boundingRect(with: maxSize, options: NSStringDrawingOptions.usesLineFragmentOrigin, context: nil)
+        let size = CGSize(width: rect.size.width, height: rect.size.height)
+        return size
     }
 }

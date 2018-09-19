@@ -30,7 +30,7 @@ class WatchVideoViewController: UIViewController, WKUIDelegate {
         webView = WKWebView(frame: viewForEmbeddingWebView.bounds, configuration: wkConfig)
         webView.uiDelegate = self
         webView.navigationDelegate = self
-        webView.autoresizingMask = [UIViewAutoresizing.flexibleWidth, UIViewAutoresizing.flexibleHeight]
+        webView.autoresizingMask = [UIView.AutoresizingMask.flexibleWidth, UIView.AutoresizingMask.flexibleHeight]
         self.viewForEmbeddingWebView.addSubview(webView)
     }
     
@@ -44,10 +44,10 @@ class WatchVideoViewController: UIViewController, WKUIDelegate {
                 .font: UIFont.preferredFont(forTextStyle: .title1),
                 .foregroundColor: #colorLiteral(red: 0.02727892995, green: 0.2292442918, blue: 0.4042541981, alpha: 1)
                 ])
-            let subHeadlineAttrString = NSMutableAttributedString(string: video.category, attributes: [
-                .font: UIFont.preferredFont(forTextStyle: .title2),
-                .foregroundColor: #colorLiteral(red: 0.2549019754, green: 0.2745098174, blue: 0.3019607961, alpha: 1)
-                ])
+//            let subHeadlineAttrString = NSMutableAttributedString(string: video.category, attributes: [
+//                .font: UIFont.preferredFont(forTextStyle: .headline),
+//                .foregroundColor: #colorLiteral(red: 0.2549019754, green: 0.2745098174, blue: 0.3019607961, alpha: 1)
+//                ])
             let bodyAttrString = NSMutableAttributedString(string: video.details, attributes: [
                 .font: UIFont.preferredFont(forTextStyle: .body)
                 ])
@@ -79,9 +79,9 @@ class WatchVideoViewController: UIViewController, WKUIDelegate {
             let content = headlineAttrString
             var end = content.length
             content.replaceCharacters(in: NSMakeRange(end, 0), with: "\n")
-            content.append(subHeadlineAttrString)
-            end = content.length
-            content.replaceCharacters(in: NSMakeRange(end, 0), with: "\n")
+//            content.append(subHeadlineAttrString)
+//            end = content.length
+//            content.replaceCharacters(in: NSMakeRange(end, 0), with: "\n")
             content.append(bodyAttrString)
             end = content.length
             content.replaceCharacters(in: NSMakeRange(end, 0), with: "\n")

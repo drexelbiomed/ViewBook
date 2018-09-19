@@ -20,6 +20,8 @@ class VideoTableViewController: UIViewController, UITableViewDataSource, UITable
             self.tableView.reloadData()
         }
         self.tableView.register(CustomTableViewHeader.self, forHeaderFooterViewReuseIdentifier: CustomTableViewHeader.reuseIdentifer)
+        self.tableView.estimatedSectionHeaderHeight = 108.0
+        self.tableView.sectionHeaderHeight = UITableView.automaticDimension
     }
 
     override func didReceiveMemoryWarning() {
@@ -48,9 +50,17 @@ class VideoTableViewController: UIViewController, UITableViewDataSource, UITable
     
     func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
         if let header = tableView.dequeueReusableHeaderFooterView(withIdentifier: CustomTableViewHeader.reuseIdentifer) as? CustomTableViewHeader {
-            header.customLabel.text = videos[section][0].category
             header.contentView.backgroundColor = UIColor.white
-            header.customLabel.textColor = #colorLiteral(red: 0.02727892995, green: 0.2292442918, blue: 0.4042541981, alpha: 1)
+            header.label.textColor = #colorLiteral(red: 0.02727892995, green: 0.2292442918, blue: 0.4042541981, alpha: 1)
+            header.label.font = header.font
+            header.label.numberOfLines = 0
+            header.label.lineBreakMode = .byWordWrapping
+            header.label.text = videos[section][0].category
+            if let text = header.label.text as NSString? {
+                let size = text.size(withAttributes: [.font: header.font])
+                header.frame = CGRect(x: 0, y: 0, width: size.width, height: size.height)
+                print()
+            }
             return header
         }
         return nil
