@@ -59,7 +59,6 @@ class VideoTableViewController: UIViewController, UITableViewDataSource, UITable
             if let text = header.label.text as NSString? {
                 let size = text.size(withAttributes: [.font: header.font])
                 header.frame = CGRect(x: 0, y: 0, width: size.width, height: size.height)
-                print()
             }
             return header
         }
@@ -72,7 +71,6 @@ class VideoTableViewController: UIViewController, UITableViewDataSource, UITable
     
     func tableView(_ tableView: UITableView, willDisplay cell: UITableViewCell, forRowAt indexPath: IndexPath) {
         guard let tableViewCell = cell as? VideoTableViewCell else { return }
-        print(indexPath.section)
         tableViewCell.setCollectionViewDataSourceDelegate(dataSourceDelegate: self, forRow: indexPath.section)
     }
     
