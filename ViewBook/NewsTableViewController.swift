@@ -19,6 +19,7 @@ class NewsTableViewController: UIViewController, UITableViewDataSource, UITableV
         super.viewDidLoad()
         
         let urlString = "https://drexel.edu/biomed/resources/faculty-and-staff/rss"
+        //         let urlString = "https://drexel.edu/now/biomed-news"
         beginParsing(urlString: urlString)
 
         // Uncomment the following line to preserve selection between presentations

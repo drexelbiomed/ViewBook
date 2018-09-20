@@ -39,7 +39,7 @@ class NewsCell: UITableViewCell {
         paragraphStyle.tailIndent = 0
         paragraphStyle.lineBreakMode = .byWordWrapping
         paragraphStyle.alignment = .left
-        paragraphStyle.paragraphSpacing = 1.125 * UIFont.preferredFont(forTextStyle: .body).lineHeight
+        paragraphStyle.paragraphSpacing = 0.5 * UIFont.preferredFont(forTextStyle: .body).lineHeight
         paragraphStyle.lineSpacing = 1.62
         
         let content: NSMutableAttributedString = NSMutableAttributedString(string: "")
@@ -48,11 +48,14 @@ class NewsCell: UITableViewCell {
             content.append(attrString)
             end = content.length
             if index == (attrStringArray.count - 2) {
-                content.replaceCharacters(in: NSMakeRange(end, 0), with: "\n\n")
+                content.replaceCharacters(in: NSMakeRange(end, 0), with: "\n")
             } else {
               content.replaceCharacters(in: NSMakeRange(end, 0), with: "\n")
             }
         }
+        
+        content.addAttribute(.paragraphStyle, value: paragraphStyle, range: NSMakeRange(0, content.length))
+
         
         self.textView.attributedText = content
     }
