@@ -133,7 +133,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Lqr-1T-feC" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1246.376811594203" y="-162.22826086956522"/>
+            <point key="canvasLocation" x="1223" y="-473"/>
         </scene>
         <!--Videos-->
         <scene sceneID="GDF-FH-qd6">
@@ -162,7 +162,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Xcc-xX-d5x" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="464" y="-163"/>
+            <point key="canvasLocation" x="464" y="-473"/>
         </scene>
         <!--Watch-->
         <scene sceneID="8UJ-5O-nd5">
@@ -252,7 +252,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="k8d-ZO-twv" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1970.4000000000001" y="-162.3688155922039"/>
+            <point key="canvasLocation" x="1946" y="-474"/>
         </scene>
         <!--News-->
         <scene sceneID="Wvx-G1-iBm">
@@ -315,14 +315,25 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="akc-lW-Imu"/>
                     </view>
-                    <navigationItem key="navigationItem" title="News" id="le3-Ou-oPx"/>
+                    <navigationItem key="navigationItem" title="News" id="le3-Ou-oPx">
+                        <segmentedControl key="titleView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="bar" selectedSegmentIndex="0" id="rLl-iS-JWZ">
+                            <rect key="frame" x="122.66666666666669" y="7" width="169" height="30"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <color key="backgroundColor" red="0.0" green="0.37969619035720825" blue="0.60400527715682983" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <segments>
+                                <segment title="BIOMED"/>
+                                <segment title="DrexelNOW"/>
+                            </segments>
+                            <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        </segmentedControl>
+                    </navigationItem>
                     <connections>
                         <outlet property="tableView" destination="UMz-jo-7zK" id="IMN-gB-lCV"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="bJl-JA-Dll" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1246" y="513"/>
+            <point key="canvasLocation" x="1223" y="236"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="HdQ-Qi-MOx">
@@ -338,6 +349,7 @@
                     <connections>
                         <segue destination="Dr8-1g-tEK" kind="relationship" relationship="viewControllers" id="NKL-R3-JHW"/>
                         <segue destination="Vp0-eh-WMC" kind="relationship" relationship="viewControllers" id="3Ib-gy-Frw"/>
+                        <segue destination="XJm-lX-IGR" kind="relationship" relationship="viewControllers" id="RhZ-px-dQF"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="6Fs-jX-6df" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -370,10 +382,109 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="cbG-rt-oT3" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="463.768115942029" y="512.77173913043487"/>
+            <point key="canvasLocation" x="464" y="236"/>
+        </scene>
+        <!--Academics-->
+        <scene sceneID="UcW-oE-zdb">
+            <objects>
+                <viewController title="Academics" id="FPW-xz-jRO" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="IXQ-p5-K8Z">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="571"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="uWs-UD-IBd">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="571"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" rowHeight="200" id="mEz-gC-3a8">
+                                        <rect key="frame" x="0.0" y="28" width="414" height="200"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="mEz-gC-3a8" id="NJw-kM-RGR">
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="199.66666666666666"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" scrollEnabled="NO" editable="NO" usesAttributedText="YES" translatesAutoresizingMaskIntoConstraints="NO" id="jWf-yp-RFd">
+                                                    <rect key="frame" x="8" y="9" width="398" height="190.66666666666666"/>
+                                                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    <attributedString key="attributedText">
+                                                        <fragment>
+                                                            <string key="content">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
+                                                            <attributes>
+                                                                <font key="NSFont" metaFont="system" size="14"/>
+                                                            </attributes>
+                                                        </fragment>
+                                                    </attributedString>
+                                                    <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                                    <dataDetectorType key="dataDetectorTypes" link="YES"/>
+                                                </textView>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="jWf-yp-RFd" firstAttribute="top" secondItem="NJw-kM-RGR" secondAttribute="top" constant="9" id="5cf-M5-ruQ"/>
+                                                <constraint firstItem="jWf-yp-RFd" firstAttribute="leading" secondItem="NJw-kM-RGR" secondAttribute="leading" constant="8" id="T95-cR-B0l"/>
+                                                <constraint firstAttribute="trailing" secondItem="jWf-yp-RFd" secondAttribute="trailing" constant="8" id="WVF-j8-nl4"/>
+                                                <constraint firstAttribute="bottom" secondItem="jWf-yp-RFd" secondAttribute="bottom" id="kxe-B7-eE2"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </prototypes>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="iMj-IK-1CP" firstAttribute="bottom" secondItem="uWs-UD-IBd" secondAttribute="bottom" id="3pb-Sq-oLz"/>
+                            <constraint firstItem="uWs-UD-IBd" firstAttribute="leading" secondItem="iMj-IK-1CP" secondAttribute="leading" id="4oP-jM-VeK"/>
+                            <constraint firstItem="iMj-IK-1CP" firstAttribute="trailing" secondItem="uWs-UD-IBd" secondAttribute="trailing" id="VaS-vG-oEp"/>
+                            <constraint firstItem="uWs-UD-IBd" firstAttribute="top" secondItem="iMj-IK-1CP" secondAttribute="top" id="hzA-eW-aEE"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="iMj-IK-1CP"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Academics" id="R33-LE-Fgw">
+                        <segmentedControl key="titleView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" segmentControlStyle="bar" selectedSegmentIndex="0" id="G6t-7e-VTN">
+                            <rect key="frame" x="47" y="7" width="320" height="30"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <color key="backgroundColor" red="0.0" green="0.37969619035720825" blue="0.60400527715682983" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <segments>
+                                <segment title="Undergraduate"/>
+                                <segment title="Graduate"/>
+                                <segment title="Certificate"/>
+                            </segments>
+                            <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        </segmentedControl>
+                    </navigationItem>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="oor-Y3-H7p" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1223" y="972"/>
+        </scene>
+        <!--Academics-->
+        <scene sceneID="N5H-Mv-Ppq">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="XJm-lX-IGR" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Academics" image="book" id="dI6-iJ-9Gx"/>
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" translucent="NO" largeTitles="YES" id="dEh-V4-owg">
+                        <rect key="frame" x="0.0" y="20" width="414" height="96"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="barTintColor" red="0.039215687659999998" green="0.16862745579999999" blue="0.32941177490000001" alpha="1" colorSpace="calibratedRGB"/>
+                        <textAttributes key="titleTextAttributes">
+                            <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        </textAttributes>
+                        <textAttributes key="largeTitleTextAttributes">
+                            <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        </textAttributes>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="FPW-xz-jRO" kind="relationship" relationship="rootViewController" id="L4d-e7-G2B"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="EtF-Ym-IyH" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="464" y="972"/>
         </scene>
     </scenes>
     <resources>
+        <image name="book" width="30" height="30"/>
         <image name="circled_play" width="30" height="30"/>
         <image name="news" width="30" height="30"/>
     </resources>
