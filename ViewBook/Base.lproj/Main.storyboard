@@ -316,13 +316,14 @@
                         <viewLayoutGuide key="safeArea" id="akc-lW-Imu"/>
                     </view>
                     <navigationItem key="navigationItem" title="News" id="le3-Ou-oPx">
-                        <segmentedControl key="titleView" opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="bar" selectedSegmentIndex="0" id="rLl-iS-JWZ">
+                        <segmentedControl key="titleView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="bar" selectedSegmentIndex="0" id="rLl-iS-JWZ">
                             <rect key="frame" x="12" y="7" width="390" height="30"/>
                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             <color key="backgroundColor" red="0.0" green="0.37969619035720825" blue="0.60400527715682983" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             <segments>
                                 <segment title="BIOMED"/>
                                 <segment title="DrexelNOW"/>
+                                <segment title="Drexel News Blog"/>
                             </segments>
                             <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         </segmentedControl>
@@ -388,7 +389,7 @@
         <!--Academics-->
         <scene sceneID="UcW-oE-zdb">
             <objects>
-                <viewController title="Academics" id="FPW-xz-jRO" sceneMemberID="viewController">
+                <viewController title="Academics" id="FPW-xz-jRO" customClass="AcademicsTableViewController" customModule="ViewBook" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="IXQ-p5-K8Z">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="571"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -397,7 +398,7 @@
                                 <rect key="frame" x="0.0" y="0.0" width="414" height="571"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" rowHeight="200" id="mEz-gC-3a8">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="cell" rowHeight="200" id="mEz-gC-3a8" customClass="AcademicsCell" customModule="ViewBook" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="28" width="414" height="200"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="mEz-gC-3a8" id="NJw-kM-RGR">
@@ -426,8 +427,15 @@
                                                 <constraint firstAttribute="bottom" secondItem="jWf-yp-RFd" secondAttribute="bottom" id="kxe-B7-eE2"/>
                                             </constraints>
                                         </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="textView" destination="jWf-yp-RFd" id="qZg-gA-6P5"/>
+                                        </connections>
                                     </tableViewCell>
                                 </prototypes>
+                                <connections>
+                                    <outlet property="dataSource" destination="FPW-xz-jRO" id="Abw-PF-YfM"/>
+                                    <outlet property="delegate" destination="FPW-xz-jRO" id="vAe-zJ-6rN"/>
+                                </connections>
                             </tableView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -440,8 +448,8 @@
                         <viewLayoutGuide key="safeArea" id="iMj-IK-1CP"/>
                     </view>
                     <navigationItem key="navigationItem" title="Academics" id="R33-LE-Fgw">
-                        <segmentedControl key="titleView" opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" segmentControlStyle="bar" selectedSegmentIndex="0" id="G6t-7e-VTN">
-                            <rect key="frame" x="0.0" y="7" width="414" height="30"/>
+                        <segmentedControl key="titleView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" segmentControlStyle="bar" selectedSegmentIndex="0" id="G6t-7e-VTN">
+                            <rect key="frame" x="12" y="7" width="390" height="30"/>
                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             <color key="backgroundColor" red="0.0" green="0.37969619035720825" blue="0.60400527715682983" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             <segments>
@@ -452,6 +460,10 @@
                             <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         </segmentedControl>
                     </navigationItem>
+                    <connections>
+                        <outlet property="segmentedControl" destination="G6t-7e-VTN" id="YTJ-WI-O5g"/>
+                        <outlet property="tableView" destination="uWs-UD-IBd" id="InL-mz-Jjc"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="oor-Y3-H7p" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

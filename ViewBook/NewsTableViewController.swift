@@ -14,7 +14,7 @@ class NewsTableViewController: UIViewController, UITableViewDataSource, UITableV
     @IBOutlet weak var newsSource: UISegmentedControl!
     var newsModel = NewsModel()
     var newsRow = NewsRow()
-    var currentContent = String()
+    var currentContent = ""
     var urlString = ""
 
     override func viewDidLoad() {
@@ -141,7 +141,7 @@ class NewsTableViewController: UIViewController, UITableViewDataSource, UITableV
         case "item":
             newsModel.addRow(row: newsRow)
 //            print ("model has \(newsRow)")
-        case"title":
+        case "title":
             newsRow.headline = currentContent
         case "description":
             newsRow.summary = currentContent
@@ -164,8 +164,10 @@ class NewsTableViewController: UIViewController, UITableViewDataSource, UITableV
     @objc func segmentedControlValueChanged(segment: UISegmentedControl) {
         if segment.selectedSegmentIndex == 0 {
             urlString = "https://drexel.edu/biomed/resources/faculty-and-staff/rss"
-        } else {
+        } else if segment.selectedSegmentIndex == 1 {
             urlString = "https://drexel.edu/now/biomed-news"
+        } else {
+            urlString = "https://newsblog.drexel.edu/tag/school-of-biomedical-engineering-science-and-health-systems/feed/"
         }
         beginParsing(urlString: urlString)
     }
