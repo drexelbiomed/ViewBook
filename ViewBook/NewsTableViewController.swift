@@ -11,16 +11,19 @@ import Foundation
 
 class NewsTableViewController: UIViewController, UITableViewDataSource, UITableViewDelegate, XMLParserDelegate {
     @IBOutlet weak var tableView: UITableView!
+    @IBOutlet weak var newsSource: UISegmentedControl!
     var newsModel = NewsModel()
     var newsRow = NewsRow()
     var currentContent = String()
-    
+    var urlString = ""
+
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        let urlString = "https://drexel.edu/biomed/resources/faculty-and-staff/rss"
-        //         let urlString = "https://drexel.edu/now/biomed-news"
+        urlString = "https://drexel.edu/biomed/resources/faculty-and-staff/rss"
         beginParsing(urlString: urlString)
+        
+        newsSource.addTarget(self, action: #selector(NewsTableViewController.segmentedControlValueChanged), for: UIControl.Event.valueChanged)
 
         // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false
@@ -156,6 +159,15 @@ class NewsTableViewController: UIViewController, UITableViewDataSource, UITableV
         default:
             return
         }
+    }
+    
+    @objc func segmentedControlValueChanged(segment: UISegmentedControl) {
+        if segment.selectedSegmentIndex == 0 {
+            urlString = "https://drexel.edu/biomed/resources/faculty-and-staff/rss"
+        } else {
+            urlString = "https://drexel.edu/now/biomed-news"
+        }
+        beginParsing(urlString: urlString)
     }
 
     /*
