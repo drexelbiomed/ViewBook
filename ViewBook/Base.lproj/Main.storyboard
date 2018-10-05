@@ -335,13 +335,13 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="bJl-JA-Dll" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1223" y="236"/>
+            <point key="canvasLocation" x="1221.7391304347827" y="235.59782608695653"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="HdQ-Qi-MOx">
             <objects>
                 <tabBarController id="fmt-Bn-dhc" sceneMemberID="viewController">
-                    <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" translucent="NO" id="CYV-bW-nka">
+                    <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" translucent="NO" itemPositioning="centered" id="CYV-bW-nka">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="49"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>

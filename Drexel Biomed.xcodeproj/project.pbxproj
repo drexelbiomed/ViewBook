@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		5508DD422167C66300EFB05E /* Spinner.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5508DD412167C66300EFB05E /* Spinner.swift */; };
 		5526C890214181C00036ADF7 /* VideoCollection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5526C88F214181BF0036ADF7 /* VideoCollection.swift */; };
 		5526C896214302FC0036ADF7 /* VideoTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5526C895214302FC0036ADF7 /* VideoTableViewController.swift */; };
 		5526C8982143055A0036ADF7 /* VideoTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5526C8972143055A0036ADF7 /* VideoTableViewCell.swift */; };
@@ -31,6 +32,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		5508DD412167C66300EFB05E /* Spinner.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Spinner.swift; sourceTree = "<group>"; };
 		5526C88F214181BF0036ADF7 /* VideoCollection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideoCollection.swift; sourceTree = "<group>"; };
 		5526C895214302FC0036ADF7 /* VideoTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideoTableViewController.swift; sourceTree = "<group>"; };
 		5526C8972143055A0036ADF7 /* VideoTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideoTableViewCell.swift; sourceTree = "<group>"; };
@@ -97,6 +99,7 @@
 				5569337D20FD2BF9005B2AD7 /* MyError.swift */,
 				559F027421497FAD000EE8BA /* NewsTableViewController.swift */,
 				559F027A2149833E000EE8BA /* NewsModel.swift */,
+				5508DD412167C66300EFB05E /* Spinner.swift */,
 				559F027C2149A0EF000EE8BA /* NewsCell.swift */,
 				5569337B20FD2AE4005B2AD7 /* Video.swift */,
 				5526C88F214181BF0036ADF7 /* VideoCollection.swift */,
@@ -191,6 +194,7 @@
 				554912F720FD19F500253C55 /* VideoCell.swift in Sources */,
 				559F027D2149A0EF000EE8BA /* NewsCell.swift in Sources */,
 				555F455B2163BB67004FB7AE /* AcademicsTableViewController.swift in Sources */,
+				5508DD422167C66300EFB05E /* Spinner.swift in Sources */,
 				555F455D2163C3C8004FB7AE /* AcademicsModel.swift in Sources */,
 				557D7F0A2107D76900649A4F /* ImageCache.swift in Sources */,
 				554912FB20FD1CDC00253C55 /* NetworkingService.swift in Sources */,

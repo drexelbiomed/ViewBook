@@ -20,9 +20,14 @@ class AcademicsTableViewController: UIViewController, UITableViewDataSource, UIT
         super.viewDidLoad()
 
         urlString = "https://drexel.edu/biomed/resources/faculty-and-staff/undergraduate-programs"
-        beginParsing(urlString: urlString)
         
         segmentedControl.addTarget(self, action: #selector(AcademicsTableViewController.segmentedControlValueChanged), for: UIControl.Event.valueChanged)
+        Spinner.start(style: .whiteLarge, background: #colorLiteral(red: 1, green: 1, blue: 1, alpha: 0.2), foreground: #colorLiteral(red: 0, green: 0.3796961904, blue: 0.6040052772, alpha: 1))
+    }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(true)
+        beginParsing(urlString: urlString)
     }
     
     override func didReceiveMemoryWarning() {
@@ -110,7 +115,14 @@ class AcademicsTableViewController: UIViewController, UITableViewDataSource, UIT
         } else {
             urlString = "https://drexel.edu/biomed/resources/faculty-and-staff/certificate-programs"
         }
+        Spinner.start(style: .whiteLarge, background: #colorLiteral(red: 1, green: 1, blue: 1, alpha: 0.3279599472), foreground: #colorLiteral(red: 0, green: 0.3796961904, blue: 0.6040052772, alpha: 1))
         beginParsing(urlString: urlString)
+    }
+    
+    func tableView(_ tableView: UITableView, didEndDisplaying cell: UITableViewCell, forRowAt indexPath: IndexPath) {
+        if indexPath.row == indexPath.endIndex {
+            Spinner.stop()
+        }
     }
 
     /*

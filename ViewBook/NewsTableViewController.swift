@@ -20,8 +20,7 @@ class NewsTableViewController: UIViewController, UITableViewDataSource, UITableV
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        urlString = "https://drexel.edu/biomed/resources/faculty-and-staff/rss"
-        beginParsing(urlString: urlString)
+        urlString = "https://drexel.edu/biomed/news"
         
         newsSource.addTarget(self, action: #selector(NewsTableViewController.segmentedControlValueChanged), for: UIControl.Event.valueChanged)
 
@@ -30,6 +29,12 @@ class NewsTableViewController: UIViewController, UITableViewDataSource, UITableV
 
         // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
         // self.navigationItem.rightBarButtonItem = self.editButtonItem
+        Spinner.start(style: .whiteLarge, background: #colorLiteral(red: 1, green: 1, blue: 1, alpha: 0.2), foreground: #colorLiteral(red: 0, green: 0.3796961904, blue: 0.6040052772, alpha: 1))
+    }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(true)
+        beginParsing(urlString: urlString)
     }
 
     override func didReceiveMemoryWarning() {
@@ -116,6 +121,7 @@ class NewsTableViewController: UIViewController, UITableViewDataSource, UITableV
             print("Error Description:\(error.localizedDescription)")
             print("Line number: \(parser.lineNumber)")
         }
+        print("Reloading Data")
         tableView.reloadData()
     }
     
@@ -162,16 +168,24 @@ class NewsTableViewController: UIViewController, UITableViewDataSource, UITableV
     }
     
     @objc func segmentedControlValueChanged(segment: UISegmentedControl) {
+        print("segment control value changed")
+        Spinner.start(style: .whiteLarge, background: #colorLiteral(red: 1, green: 1, blue: 1, alpha: 0.3279599472), foreground: #colorLiteral(red: 0, green: 0.3796961904, blue: 0.6040052772, alpha: 1))
         if segment.selectedSegmentIndex == 0 {
-            urlString = "https://drexel.edu/biomed/resources/faculty-and-staff/rss"
+            urlString = "https://drexel.edu/biomed/news"
         } else if segment.selectedSegmentIndex == 1 {
             urlString = "https://drexel.edu/now/biomed-news"
         } else {
             urlString = "https://newsblog.drexel.edu/tag/school-of-biomedical-engineering-science-and-health-systems/feed/"
         }
+        print("beginning parsing")
         beginParsing(urlString: urlString)
     }
-
+    
+    func tableView(_ tableView: UITableView, didEndDisplaying cell: UITableViewCell, forRowAt indexPath: IndexPath) {
+        if indexPath.row == indexPath.endIndex {
+            Spinner.stop()
+        }
+    }
     /*
     // MARK: - Navigation
 

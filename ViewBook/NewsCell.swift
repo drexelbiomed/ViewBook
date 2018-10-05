@@ -68,6 +68,8 @@ class NewsCell: UITableViewCell {
     
     func strip (string: String) -> String {
         return string.replacingOccurrences(of: "<[^>]+>", with: "", options: .regularExpression, range: nil)
+            .replacingOccurrences(of: " [&#8230;]", with: "…")
+            .replacingOccurrences(of: "&#160;", with: "")
     }
 
 }
