@@ -15,12 +15,14 @@ class AcademicsTableViewController: UIViewController, UITableViewDataSource, UIT
     var academicsRow = AcademicsRow()
     var currentContent = ""
     var urlString = ""
+    var priorities = [String]()
 
     override func viewDidLoad() {
         super.viewDidLoad()
 
         urlString = "https://drexel.edu/biomed/resources/faculty-and-staff/undergraduate-programs"
-        
+        priorities = ["bachelor", "degree", "co-ops", "co-op", "design"]
+
         segmentedControl.addTarget(self, action: #selector(AcademicsTableViewController.segmentedControlValueChanged), for: UIControl.Event.valueChanged)
         Spinner.start(style: .whiteLarge, background: #colorLiteral(red: 1, green: 1, blue: 1, alpha: 0.2), foreground: #colorLiteral(red: 0, green: 0.3796961904, blue: 0.6040052772, alpha: 1))
     }
@@ -72,12 +74,10 @@ class AcademicsTableViewController: UIViewController, UITableViewDataSource, UIT
             print("Error Description:\(error.localizedDescription)")
             print("Line number: \(parser.lineNumber)")
         }
-        tableView.reloadData()
     }
     
     //MARK: XMLParser delegates
     func parser(_ parser: XMLParser, didStartElement elementName: String, namespaceURI: String?, qualifiedName qName: String?, attributes attributeDict: [String : String]){
-        //        print("Beginning tag: <\(elementName)>")
         if elementName == "item"{
             academicsRow = AcademicsRow()
         }
@@ -88,11 +88,9 @@ class AcademicsTableViewController: UIViewController, UITableViewDataSource, UIT
     //append the string for the element
     func parser(_ parser: XMLParser, foundCharacters string: String){
         currentContent += string
-        //        print("Added to make \(currentContent)")
     }
     
     func parser(_ parser: XMLParser, didEndElement elementName: String, namespaceURI: String?, qualifiedName qName: String?){
-        //        print("ending tag: </\(elementName)> with contents:\(currentContent)")
         switch elementName {
         case "item":
             academicsModel.addRow(row: academicsRow)
@@ -107,22 +105,45 @@ class AcademicsTableViewController: UIViewController, UITableViewDataSource, UIT
         }
     }
     
+    func parser(_ parser: XMLParser, parseErrorOccurred parseError: Error) {
+        print("parseErrorOccurred: \(parseError)")
+    }
+    
+    func parserDidEndDocument(_ parser: XMLParser) {
+        DispatchQueue.main.async {
+            self.academicsModel.data = self.academicsModel.sortBy(arrayOfMatchStrings: self.priorities, academicsData: self.academicsModel.data)
+            self.tableView.reloadData()
+            Spinner.stop()
+            self.scrollToFirstRow()
+        }
+    }
+    
+    //MARK: - Segmented Control Code
+    
     @objc func segmentedControlValueChanged(segment: UISegmentedControl) {
+        Spinner.start(style: .whiteLarge, background: #colorLiteral(red: 1, green: 1, blue: 1, alpha: 0.3279599472), foreground: #colorLiteral(red: 0, green: 0.3796961904, blue: 0.6040052772, alpha: 1))
+
         if segment.selectedSegmentIndex == 0 {
             urlString = "https://drexel.edu/biomed/resources/faculty-and-staff/undergraduate-programs"
+            priorities = ["bachelor", "degree", "co-ops", "co-op", "design"]
         } else if segment.selectedSegmentIndex == 1 {
             urlString = "https://drexel.edu/biomed/resources/faculty-and-staff/graduate-programs"
+            priorities = ["master of science (ms) in biomedical", "business", "phd", "international", "minor"]
         } else {
             urlString = "https://drexel.edu/biomed/resources/faculty-and-staff/certificate-programs"
+            priorities = ["tissue", "bioinformatics"]
         }
-        Spinner.start(style: .whiteLarge, background: #colorLiteral(red: 1, green: 1, blue: 1, alpha: 0.3279599472), foreground: #colorLiteral(red: 0, green: 0.3796961904, blue: 0.6040052772, alpha: 1))
+
         beginParsing(urlString: urlString)
     }
     
-    func tableView(_ tableView: UITableView, didEndDisplaying cell: UITableViewCell, forRowAt indexPath: IndexPath) {
-        if indexPath.row == indexPath.endIndex {
-            Spinner.stop()
-        }
+    func scrollToFirstRow() {
+        let indexPath = IndexPath(row: 0, section: 0)
+        self.tableView.scrollToRow(at: indexPath, at: .top, animated: true)
+    }
+    
+    func scrollToTop(){
+        self.tableView.setContentOffset(CGPoint(x: 0,  y: UIApplication.shared.statusBarFrame.height ), animated: true)
     }
 
     /*

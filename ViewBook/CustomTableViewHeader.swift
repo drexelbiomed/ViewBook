@@ -22,7 +22,7 @@ class CustomTableViewHeader: UITableViewHeaderFooterView {
         let margins = contentView.layoutMarginsGuide
         label.leadingAnchor.constraint(equalTo: margins.leadingAnchor).isActive = true
         label.trailingAnchor.constraint(equalTo: margins.trailingAnchor).isActive = true
-        label.topAnchor.constraint(equalTo: margins.topAnchor).isActive = true
+        label.topAnchor.constraint(equalTo: margins.topAnchor, constant: 32).isActive = true
         label.bottomAnchor.constraint(equalTo: margins.bottomAnchor).isActive = true
     }
     
@@ -34,7 +34,7 @@ class CustomTableViewHeader: UITableViewHeaderFooterView {
         let attrString = NSAttributedString.init(string: text, attributes: [.font
             : font])
         let rect = attrString.boundingRect(with: maxSize, options: NSStringDrawingOptions.usesLineFragmentOrigin, context: nil)
-        let size = CGSize(width: rect.size.width, height: rect.size.height)
+        let size = CGSize(width: rect.size.width, height: (rect.size.height))
         return size
     }
 }

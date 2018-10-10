@@ -9,13 +9,11 @@
 import UIKit
 
 class AcademicsRow: NSObject {
-//    var pubDate: String = "initial"
     var headline: String = "initial"
     var summary: String = "initial"
     var link: String = "initial"
     override init(){}
     init(date: String, title: String, description: String, link: String){
-//        self.pubDate = date
         self.headline = title
         self.summary = description
         self.link = link
@@ -27,5 +25,25 @@ class AcademicsModel: NSObject {
     
     func addRow(row: AcademicsRow){
         data += [row]
+    }
+    
+    func sortBy(arrayOfMatchStrings: [String], academicsData: [AcademicsRow]) -> [AcademicsRow] {
+        var sortedList = [AcademicsRow]()
+        var skipIndicies = [Int]()
+        var academicsDataCopy = academicsData
+        for match in arrayOfMatchStrings {
+            for (i, item) in academicsDataCopy.enumerated() {
+                if item.headline.containsIgnoringCase(find: match) {
+                    if !skipIndicies.contains(i) {
+                        sortedList.append(item)
+                        skipIndicies.append(i)
+                    }
+                }
+            }
+        }
+        for skip in skipIndicies.sorted(by: >) {
+            academicsDataCopy.remove(at: skip)
+        }
+        return sortedList + academicsDataCopy
     }
 }

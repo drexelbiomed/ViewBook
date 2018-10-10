@@ -316,20 +316,20 @@
                         <viewLayoutGuide key="safeArea" id="akc-lW-Imu"/>
                     </view>
                     <navigationItem key="navigationItem" title="News" id="le3-Ou-oPx">
-                        <segmentedControl key="titleView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="bar" selectedSegmentIndex="0" id="rLl-iS-JWZ">
-                            <rect key="frame" x="12" y="7" width="390" height="30"/>
+                        <segmentedControl key="titleView" opaque="NO" contentMode="center" contentHorizontalAlignment="leading" contentVerticalAlignment="top" segmentControlStyle="bar" selectedSegmentIndex="0" id="rLl-iS-JWZ">
+                            <rect key="frame" x="24.666666666666657" y="7" width="365" height="30"/>
                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            <color key="backgroundColor" red="0.0" green="0.37969619035720825" blue="0.60400527715682983" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <color key="backgroundColor" red="0.039215687659999998" green="0.16862745579999999" blue="0.32941177490000001" alpha="1" colorSpace="calibratedRGB"/>
                             <segments>
                                 <segment title="BIOMED"/>
-                                <segment title="DrexelNOW"/>
+                                <segment title="DrexelNow"/>
                                 <segment title="Drexel News Blog"/>
                             </segments>
-                            <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <color key="tintColor" red="0.99607843159999998" green="0.74117648599999997" blue="0.054901961239999998" alpha="1" colorSpace="calibratedRGB"/>
                         </segmentedControl>
                     </navigationItem>
                     <connections>
-                        <outlet property="newsSource" destination="rLl-iS-JWZ" id="Zdq-d1-BkF"/>
+                        <outlet property="segmentedControl" destination="rLl-iS-JWZ" id="VLQ-CJ-Ret"/>
                         <outlet property="tableView" destination="UMz-jo-7zK" id="IMN-gB-lCV"/>
                     </connections>
                 </viewController>
@@ -449,9 +449,9 @@
                     </view>
                     <navigationItem key="navigationItem" title="Academics" id="R33-LE-Fgw">
                         <segmentedControl key="titleView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" segmentControlStyle="bar" selectedSegmentIndex="0" id="G6t-7e-VTN">
-                            <rect key="frame" x="12" y="7" width="390" height="30"/>
+                            <rect key="frame" x="39" y="7" width="336" height="30"/>
                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            <color key="backgroundColor" red="0.0" green="0.37969619035720825" blue="0.60400527715682983" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <color key="backgroundColor" red="0.039215687659999998" green="0.16862745579999999" blue="0.32941177490000001" alpha="1" colorSpace="calibratedRGB"/>
                             <segments>
                                 <segment title="Undergraduate"/>
                                 <segment title="Graduate"/>
@@ -467,7 +467,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="oor-Y3-H7p" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1223" y="972"/>
+            <point key="canvasLocation" x="1221.7391304347827" y="971.73913043478274"/>
         </scene>
         <!--Academics-->
         <scene sceneID="N5H-Mv-Ppq">

@@ -11,7 +11,7 @@ import Foundation
 
 class NewsTableViewController: UIViewController, UITableViewDataSource, UITableViewDelegate, XMLParserDelegate {
     @IBOutlet weak var tableView: UITableView!
-    @IBOutlet weak var newsSource: UISegmentedControl!
+    @IBOutlet weak var segmentedControl: UISegmentedControl!
     var newsModel = NewsModel()
     var newsRow = NewsRow()
     var currentContent = ""
@@ -22,14 +22,12 @@ class NewsTableViewController: UIViewController, UITableViewDataSource, UITableV
         
         urlString = "https://drexel.edu/biomed/news"
         
-        newsSource.addTarget(self, action: #selector(NewsTableViewController.segmentedControlValueChanged), for: UIControl.Event.valueChanged)
+        segmentedControl.addTarget(self, action: #selector(NewsTableViewController.segmentedControlValueChanged), for: UIControl.Event.valueChanged)
 
-        // Uncomment the following line to preserve selection between presentations
-        // self.clearsSelectionOnViewWillAppear = false
-
-        // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
-        // self.navigationItem.rightBarButtonItem = self.editButtonItem
         Spinner.start(style: .whiteLarge, background: #colorLiteral(red: 1, green: 1, blue: 1, alpha: 0.2), foreground: #colorLiteral(red: 0, green: 0.3796961904, blue: 0.6040052772, alpha: 1))
+        segmentedControl.layer.cornerRadius = 3.0
+        segmentedControl.alpha = 1.0
+        segmentedControl.layer.masksToBounds = true
     }
     
     override func viewDidAppear(_ animated: Bool) {
@@ -121,13 +119,10 @@ class NewsTableViewController: UIViewController, UITableViewDataSource, UITableV
             print("Error Description:\(error.localizedDescription)")
             print("Line number: \(parser.lineNumber)")
         }
-        print("Reloading Data")
-        tableView.reloadData()
     }
     
     //MARK: XMLParser delegates
     func parser(_ parser: XMLParser, didStartElement elementName: String, namespaceURI: String?, qualifiedName qName: String?, attributes attributeDict: [String : String]){
-//        print("Beginning tag: <\(elementName)>")
         if elementName == "item"{
             newsRow = NewsRow()
         }
@@ -138,15 +133,12 @@ class NewsTableViewController: UIViewController, UITableViewDataSource, UITableV
     //append the string for the element
     func parser(_ parser: XMLParser, foundCharacters string: String){
         currentContent += string
-//        print("Added to make \(currentContent)")
     }
     
     func parser(_ parser: XMLParser, didEndElement elementName: String, namespaceURI: String?, qualifiedName qName: String?){
-//        print("ending tag: </\(elementName)> with contents:\(currentContent)")
         switch elementName {
         case "item":
             newsModel.addRow(row: newsRow)
-//            print ("model has \(newsRow)")
         case "title":
             newsRow.headline = currentContent
         case "description":
@@ -167,9 +159,24 @@ class NewsTableViewController: UIViewController, UITableViewDataSource, UITableV
         }
     }
     
+    func parser(_ parser: XMLParser, parseErrorOccurred parseError: Error) {
+        print("parseErrorOccurred: \(parseError)")
+    }
+    
+    func parserDidEndDocument(_ parser: XMLParser) {
+//        print("Did end document")
+        DispatchQueue.main.async {
+            self.tableView.reloadData()
+            Spinner.stop()
+            self.scrollToFirstRow()
+        }
+    }
+    
+    //MARK: - Segmented Control Code
+    
     @objc func segmentedControlValueChanged(segment: UISegmentedControl) {
-        print("segment control value changed")
         Spinner.start(style: .whiteLarge, background: #colorLiteral(red: 1, green: 1, blue: 1, alpha: 0.3279599472), foreground: #colorLiteral(red: 0, green: 0.3796961904, blue: 0.6040052772, alpha: 1))
+        
         if segment.selectedSegmentIndex == 0 {
             urlString = "https://drexel.edu/biomed/news"
         } else if segment.selectedSegmentIndex == 1 {
@@ -177,15 +184,14 @@ class NewsTableViewController: UIViewController, UITableViewDataSource, UITableV
         } else {
             urlString = "https://newsblog.drexel.edu/tag/school-of-biomedical-engineering-science-and-health-systems/feed/"
         }
-        print("beginning parsing")
         beginParsing(urlString: urlString)
     }
     
-    func tableView(_ tableView: UITableView, didEndDisplaying cell: UITableViewCell, forRowAt indexPath: IndexPath) {
-        if indexPath.row == indexPath.endIndex {
-            Spinner.stop()
-        }
+    func scrollToFirstRow() {
+        let indexPath = IndexPath(row: 0, section: 0)
+        self.tableView.scrollToRow(at: indexPath, at: .top, animated: true)
     }
+    
     /*
     // MARK: - Navigation
 

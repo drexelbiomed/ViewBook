@@ -23,7 +23,7 @@ public class Spinner {
             spinner?.color = foreground
             window.addSubview(spinner!)
             spinner!.startAnimating()
-            print("Spinning")
+//            print("Spinning")
         }
     }
     public static func stop() {
@@ -31,7 +31,7 @@ public class Spinner {
             spinner!.stopAnimating()
             spinner!.removeFromSuperview()
             spinner = nil
-            if spinner == nil { print("Spinner is nil") }
+//            print("Stopped")
         }
     }
     

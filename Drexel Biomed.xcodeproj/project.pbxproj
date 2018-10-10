@@ -11,6 +11,7 @@
 		5526C890214181C00036ADF7 /* VideoCollection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5526C88F214181BF0036ADF7 /* VideoCollection.swift */; };
 		5526C896214302FC0036ADF7 /* VideoTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5526C895214302FC0036ADF7 /* VideoTableViewController.swift */; };
 		5526C8982143055A0036ADF7 /* VideoTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5526C8972143055A0036ADF7 /* VideoTableViewCell.swift */; };
+		552B959A216E56960048BBE3 /* StringMethods.swift in Sources */ = {isa = PBXBuildFile; fileRef = 552B9599216E56960048BBE3 /* StringMethods.swift */; };
 		5541C2342108C83600253B1E /* WatchVideoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5541C2332108C83600253B1E /* WatchVideoViewController.swift */; };
 		554912E320FCFD8700253C55 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 554912E220FCFD8700253C55 /* AppDelegate.swift */; };
 		554912E520FCFD8700253C55 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 554912E420FCFD8700253C55 /* ViewController.swift */; };
@@ -36,6 +37,7 @@
 		5526C88F214181BF0036ADF7 /* VideoCollection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideoCollection.swift; sourceTree = "<group>"; };
 		5526C895214302FC0036ADF7 /* VideoTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideoTableViewController.swift; sourceTree = "<group>"; };
 		5526C8972143055A0036ADF7 /* VideoTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideoTableViewCell.swift; sourceTree = "<group>"; };
+		552B9599216E56960048BBE3 /* StringMethods.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StringMethods.swift; sourceTree = "<group>"; };
 		5541C2332108C83600253B1E /* WatchVideoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WatchVideoViewController.swift; sourceTree = "<group>"; };
 		554912DF20FCFD8700253C55 /* ViewBook.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ViewBook.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		554912E220FCFD8700253C55 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -97,10 +99,11 @@
 				557D7F092107D76900649A4F /* ImageCache.swift */,
 				554912FA20FD1CDC00253C55 /* NetworkingService.swift */,
 				5569337D20FD2BF9005B2AD7 /* MyError.swift */,
+				559F027C2149A0EF000EE8BA /* NewsCell.swift */,
 				559F027421497FAD000EE8BA /* NewsTableViewController.swift */,
 				559F027A2149833E000EE8BA /* NewsModel.swift */,
 				5508DD412167C66300EFB05E /* Spinner.swift */,
-				559F027C2149A0EF000EE8BA /* NewsCell.swift */,
+				552B9599216E56960048BBE3 /* StringMethods.swift */,
 				5569337B20FD2AE4005B2AD7 /* Video.swift */,
 				5526C88F214181BF0036ADF7 /* VideoCollection.swift */,
 				554912F620FD19F500253C55 /* VideoCell.swift */,
@@ -188,6 +191,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				559F027B2149833E000EE8BA /* NewsModel.swift in Sources */,
+				552B959A216E56960048BBE3 /* StringMethods.swift in Sources */,
 				5569337E20FD2BF9005B2AD7 /* MyError.swift in Sources */,
 				5526C8982143055A0036ADF7 /* VideoTableViewCell.swift in Sources */,
 				5541C2342108C83600253B1E /* WatchVideoViewController.swift in Sources */,

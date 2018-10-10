@@ -25,9 +25,9 @@ class AcademicsCell: UITableViewCell {
     func configure(with program: AcademicsRow) {
         let headlineAttrString = NSMutableAttributedString(string: strip(string: program.headline), attributes: [.font: UIFont.preferredFont(forTextStyle: .headline), .foregroundColor: #colorLiteral(red: 0.02727892995, green: 0.2292442918, blue: 0.4042541981, alpha: 1)])
         let summaryAttrString = NSMutableAttributedString(string: strip(string: program.summary), attributes: [
-            .font: UIFont.preferredFont(forTextStyle: .body)
+            .font: UIFont.preferredFont(forTextStyle: .callout)
             ])
-        let linkAttrString = NSMutableAttributedString(string: "→ Read More", attributes: [
+        let linkAttrString = NSMutableAttributedString(string: "Read More", attributes: [
             .font: UIFont.preferredFont(forTextStyle: .headline),
             .foregroundColor: #colorLiteral(red: 0.1411764771, green: 0.3960784376, blue: 0.5647059083, alpha: 1)
             ])

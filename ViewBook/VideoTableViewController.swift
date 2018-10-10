@@ -54,7 +54,7 @@ class VideoTableViewController: UIViewController, UITableViewDataSource, UITable
             header.label.textColor = #colorLiteral(red: 0.02727892995, green: 0.2292442918, blue: 0.4042541981, alpha: 1)
             header.label.font = header.font
             header.label.numberOfLines = 0
-            header.label.lineBreakMode = .byWordWrapping
+            header.label.lineBreakMode = .byTruncatingTail
             header.label.text = videos[section][0].category
             if let text = header.label.text as NSString? {
                 let size = text.size(withAttributes: [.font: header.font])
@@ -66,7 +66,7 @@ class VideoTableViewController: UIViewController, UITableViewDataSource, UITable
     }
     
     func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
-        return 45
+        return 77
     }
     
     func tableView(_ tableView: UITableView, willDisplay cell: UITableViewCell, forRowAt indexPath: IndexPath) {

@@ -10,6 +10,7 @@ import UIKit
 
 class NewsCell: UITableViewCell {
     @IBOutlet weak var textView: UITextView!
+    let withSummary = true
     
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -23,15 +24,19 @@ class NewsCell: UITableViewCell {
             .foregroundColor: #colorLiteral(red: 0.2549019754, green: 0.2745098174, blue: 0.3019607961, alpha: 1)
             ])
         let summaryAttrString = NSMutableAttributedString(string: strip(string: news.summary), attributes: [
-            .font: UIFont.preferredFont(forTextStyle: .body)
+            .font: UIFont.preferredFont(forTextStyle: .callout)
             ])
-        let linkAttrString = NSMutableAttributedString(string: "→ Read More", attributes: [
+        let linkAttrString = NSMutableAttributedString(string: "Read More", attributes: [
             .font: UIFont.preferredFont(forTextStyle: .headline),
             .foregroundColor: #colorLiteral(red: 0.1411764771, green: 0.3960784376, blue: 0.5647059083, alpha: 1)
             ])
         linkAttrString.addAttribute(.link, value: news.link, range: NSMakeRange(0, linkAttrString.length))
-        
-        let attrStringArray = [pubDateAttrString, headlineAttrString, summaryAttrString, linkAttrString]
+        var attrStringArray: [NSMutableAttributedString]
+        if withSummary == true {
+            attrStringArray = [pubDateAttrString, headlineAttrString, summaryAttrString, linkAttrString]
+        } else {
+            attrStringArray = [pubDateAttrString, headlineAttrString, linkAttrString]
+        }
         
         let paragraphStyle = NSMutableParagraphStyle()
         paragraphStyle.headIndent = 0
