@@ -50,23 +50,30 @@ class VideoTableViewController: UIViewController, UITableViewDataSource, UITable
     
     func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
         if let header = tableView.dequeueReusableHeaderFooterView(withIdentifier: CustomTableViewHeader.reuseIdentifer) as? CustomTableViewHeader {
+            let attributedString = NSMutableAttributedString(string: videos[section][0].category)
+            let font = UIFont.init(name: "FuturaStd-Bold", size: UIFont.preferredFont(forTextStyle: .title1).pointSize - 2)
+            let paragraphStyle = NSMutableParagraphStyle()
+            paragraphStyle.lineSpacing = 1.62
+            attributedString.addAttributes([.font: font!, .paragraphStyle: paragraphStyle], range: NSMakeRange(0, attributedString.length))
+            
             header.contentView.backgroundColor = UIColor.white
             header.label.textColor = #colorLiteral(red: 0.02727892995, green: 0.2292442918, blue: 0.4042541981, alpha: 1)
-            header.label.font = header.font
+            header.label.font = font
             header.label.numberOfLines = 0
             header.label.lineBreakMode = .byTruncatingTail
-            header.label.text = videos[section][0].category
+            header.label.attributedText = attributedString
             if let text = header.label.text as NSString? {
                 let size = text.size(withAttributes: [.font: header.font])
                 header.frame = CGRect(x: 0, y: 0, width: size.width, height: size.height)
             }
+            
             return header
         }
         return nil
     }
     
     func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
-        return 77
+        return 150
     }
     
     func tableView(_ tableView: UITableView, willDisplay cell: UITableViewCell, forRowAt indexPath: IndexPath) {

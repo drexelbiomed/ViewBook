@@ -23,7 +23,8 @@ class AcademicsCell: UITableViewCell {
     }
     
     func configure(with program: AcademicsRow) {
-        let headlineAttrString = NSMutableAttributedString(string: strip(string: program.headline), attributes: [.font: UIFont.preferredFont(forTextStyle: .headline), .foregroundColor: #colorLiteral(red: 0.02727892995, green: 0.2292442918, blue: 0.4042541981, alpha: 1)])
+        let customFont = UIFont.init(name: "FuturaStd-Bold", size: UIFont.preferredFont(forTextStyle: .title3).pointSize)
+        let headlineAttrString = NSMutableAttributedString(string: strip(string: program.headline), attributes: [.font: customFont!, .foregroundColor: #colorLiteral(red: 0.02727892995, green: 0.2292442918, blue: 0.4042541981, alpha: 1)])
         let summaryAttrString = NSMutableAttributedString(string: strip(string: program.summary), attributes: [
             .font: UIFont.preferredFont(forTextStyle: .callout)
             ])

@@ -33,6 +33,11 @@
 			</dict>
 		</dict>
 	</dict>
+	<key>UIAppFonts</key>
+	<array>
+		<string>Adobe - FuturaStd-Bold.otf</string>
+		<string>Adobe - FuturaStd-CondensedBold.otf</string>
+	</array>
 	<key>UILaunchStoryboardName</key>
 	<string>LaunchScreen</string>
 	<key>UIMainStoryboardFile</key>

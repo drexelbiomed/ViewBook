@@ -22,7 +22,7 @@ class CustomTableViewHeader: UITableViewHeaderFooterView {
         let margins = contentView.layoutMarginsGuide
         label.leadingAnchor.constraint(equalTo: margins.leadingAnchor).isActive = true
         label.trailingAnchor.constraint(equalTo: margins.trailingAnchor).isActive = true
-        label.topAnchor.constraint(equalTo: margins.topAnchor, constant: 32).isActive = true
+        label.topAnchor.constraint(equalTo: margins.topAnchor, constant: 40).isActive = true
         label.bottomAnchor.constraint(equalTo: margins.bottomAnchor).isActive = true
     }
     

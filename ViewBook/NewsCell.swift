@@ -18,7 +18,8 @@ class NewsCell: UITableViewCell {
     }
     
     func configure(with news: NewsRow) {
-        let headlineAttrString = NSMutableAttributedString(string: strip(string: news.headline), attributes: [.font: UIFont.preferredFont(forTextStyle: .headline), .foregroundColor: #colorLiteral(red: 0.02727892995, green: 0.2292442918, blue: 0.4042541981, alpha: 1)])
+        let customFont = UIFont.init(name: "FuturaStd-Bold", size: UIFont.preferredFont(forTextStyle: .title3).pointSize)
+        let headlineAttrString = NSMutableAttributedString(string: strip(string: news.headline), attributes: [.font: customFont!, .foregroundColor: #colorLiteral(red: 0.02727892995, green: 0.2292442918, blue: 0.4042541981, alpha: 1)])
         let pubDateAttrString = NSMutableAttributedString(string: news.pubDate, attributes: [
             .font: UIFont.preferredFont(forTextStyle: .caption1),
             .foregroundColor: #colorLiteral(red: 0.2549019754, green: 0.2745098174, blue: 0.3019607961, alpha: 1)
