@@ -8,8 +8,9 @@
 
 import UIKit
 
-class VideoTableViewController: UIViewController, UITableViewDataSource, UITableViewDelegate, UICollectionViewDelegate, UICollectionViewDataSource {
+class VideoTableViewController: UIViewController, UITableViewDataSource, UITableViewDelegate, UICollectionViewDelegate, UICollectionViewDataSource, UIScrollViewDelegate {
     @IBOutlet var tableView: UITableView!
+    private let dragonImageView = UIImageView(image: UIImage(named: "dragon_gold"))
     var videos = [[Video]]()
     var selected: Video?
     
@@ -23,7 +24,27 @@ class VideoTableViewController: UIViewController, UITableViewDataSource, UITable
         self.tableView.estimatedSectionHeaderHeight = 108.0
         self.tableView.sectionHeaderHeight = UITableView.automaticDimension
     }
-
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        setupNavUI()
+    }
+    
+    override func viewWillDisappear(_ animated: Bool) {
+        super.viewWillDisappear(animated)
+        showImage(false)
+    }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        showImage(true)
+    }
+    
+    func scrollViewDidScroll(_ scrollView: UIScrollView) {
+        guard let height = navigationController?.navigationBar.frame.height else { return }
+        moveAndResizeImage(for: height)
+    }
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
@@ -114,5 +135,61 @@ class VideoTableViewController: UIViewController, UITableViewDataSource, UITable
 //             let vc = segue.destination as! WatchVideoViewController
 //             vc.thisVideo = videos[indexPath.section][indexPath.item]
     }
+    
+    private func setupNavUI() {
+        NavBarConstants.init()
+        
+        // Initial setup for image for Large NavBar state since the the screen always has Large NavBar once it gets opened
+        guard let navigationBar = self.navigationController?.navigationBar else { return }
+        navigationBar.addSubview(dragonImageView)
+        dragonImageView.layer.cornerRadius = NavBarConstants.ImageSizeForLargeState / 2
+        dragonImageView.clipsToBounds = true
+        dragonImageView.translatesAutoresizingMaskIntoConstraints = false
+        NSLayoutConstraint.activate([
+            dragonImageView.rightAnchor.constraint(equalTo: navigationBar.rightAnchor, constant: -NavBarConstants.ImageRightMargin),
+            dragonImageView.bottomAnchor.constraint(equalTo: navigationBar.bottomAnchor, constant: -NavBarConstants.ImageBottomMarginForLargeState),
+            dragonImageView.heightAnchor.constraint(equalToConstant: NavBarConstants.ImageSizeForLargeState),
+            dragonImageView.widthAnchor.constraint(equalTo: dragonImageView.heightAnchor)
+            ])
+    }
+    
+    private func moveAndResizeImage(for height: CGFloat) {
+        let coeff: CGFloat = {
+            let delta = height - NavBarConstants.NavBarHeightSmallState
+            let heightDifferenceBetweenStates = (NavBarConstants.NavBarHeightLargeState - NavBarConstants.NavBarHeightSmallState)
+            return delta / heightDifferenceBetweenStates
+        }()
+        
+        let factor = NavBarConstants.ImageSizeForSmallState / NavBarConstants.ImageSizeForLargeState
+        
+        let scale: CGFloat = {
+            let sizeAddendumFactor = coeff * (1.0 - factor)
+            return min(1.0, sizeAddendumFactor + factor)
+        }()
+        
+        // Value of difference between icons for large and small states
+        let sizeDiff = NavBarConstants.ImageSizeForLargeState * (1.0 - factor) // 8.0
+        let yTranslation: CGFloat = {
+            /// This value = 14. It equals to difference of 12 and 6 (bottom margin for large and small states). Also it adds 8.0 (size difference when the image gets smaller size)
+            let maxYTranslation = NavBarConstants.ImageBottomMarginForLargeState - NavBarConstants.ImageBottomMarginForSmallState + sizeDiff
+            return max(0, min(maxYTranslation, (maxYTranslation - coeff * (NavBarConstants.ImageBottomMarginForSmallState + sizeDiff))))
+        }()
+        
+        let xTranslation = max(0, sizeDiff - coeff * sizeDiff)
+        
+        dragonImageView.transform = CGAffineTransform.identity
+            .scaledBy(x: scale, y: scale)
+            .translatedBy(x: xTranslation, y: yTranslation)
+    }
+
+    /// Show or hide the image from NavBar while going to next screen or back to initial screen
+    ///
+    /// - Parameter show: show or hide the image from NavBar
+    private func showImage(_ show: Bool) {
+        UIView.animate(withDuration: 0.2) {
+            self.dragonImageView.alpha = show ? 1.0 : 0.0
+        }
+    }
+    
 //      Pass the selected object to the new view controller.
 }
