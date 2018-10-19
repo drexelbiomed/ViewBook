@@ -175,8 +175,8 @@
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="S2j-W2-vsp">
                                 <rect key="frame" x="0.0" y="0.0" width="414" height="571"/>
                                 <subviews>
-                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="aft-zZ-9D9">
-                                        <rect key="frame" x="0.0" y="0.0" width="414" height="472.33333333333331"/>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="aft-zZ-9D9">
+                                        <rect key="frame" x="0.0" y="0.0" width="414" height="480.33333333333331"/>
                                         <subviews>
                                             <view opaque="NO" contentMode="scaleAspectFill" translatesAutoresizingMaskIntoConstraints="NO" id="4Wx-oY-HAE">
                                                 <rect key="frame" x="0.0" y="0.0" width="414" height="233"/>
@@ -185,7 +185,7 @@
                                                 </constraints>
                                             </view>
                                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" scrollEnabled="NO" bouncesZoom="NO" editable="NO" usesAttributedText="YES" adjustsFontForContentSizeCategory="YES" translatesAutoresizingMaskIntoConstraints="NO" id="xDZ-Tp-PbX">
-                                                <rect key="frame" x="0.0" y="233" width="414" height="239.33333333333337"/>
+                                                <rect key="frame" x="0.0" y="241" width="414" height="239.33333333333337"/>
                                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <attributedString key="attributedText">
                                                     <fragment>

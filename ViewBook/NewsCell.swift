@@ -76,6 +76,11 @@ class NewsCell: UITableViewCell {
         return string.replacingOccurrences(of: "<[^>]+>", with: "", options: .regularExpression, range: nil)
             .replacingOccurrences(of: " [&#8230;]", with: "…")
             .replacingOccurrences(of: "&#160;", with: "")
+            .replacingOccurrences(of: "&lsquo;", with: "\'")
+            .replacingOccurrences(of: "&rsquo;", with: "\'")
+            .replacingOccurrences(of: "&rdquo;", with: "\"")
+            .replacingOccurrences(of: "&ldquo;", with: "\"")
+            .replacingOccurrences(of: "&nbsp;", with: " ")
     }
 
 }

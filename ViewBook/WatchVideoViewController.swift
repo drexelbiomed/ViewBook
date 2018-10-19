@@ -39,9 +39,10 @@ class WatchVideoViewController: UIViewController, WKUIDelegate {
         
         // Do any additional setup after loading the view.
         if let video = thisVideo {
+            let customFont = UIFont.init(name: "FuturaStd-Bold", size: UIFont.preferredFont(forTextStyle: .title1).pointSize)
             // init attributed strings
             let headlineAttrString = NSMutableAttributedString(string: video.title, attributes: [
-                .font: UIFont.preferredFont(forTextStyle: .title1),
+                .font: customFont!,
                 .foregroundColor: #colorLiteral(red: 0.02727892995, green: 0.2292442918, blue: 0.4042541981, alpha: 1)
                 ])
 //            let subHeadlineAttrString = NSMutableAttributedString(string: video.category, attributes: [
@@ -51,7 +52,7 @@ class WatchVideoViewController: UIViewController, WKUIDelegate {
             let bodyAttrString = NSMutableAttributedString(string: video.details, attributes: [
                 .font: UIFont.preferredFont(forTextStyle: .body)
                 ])
-            let linkAttrString = NSMutableAttributedString(string: "→ \(video.linkTitle!)", attributes: [
+            let linkAttrString = NSMutableAttributedString(string: "\(video.linkTitle!)", attributes: [
                 .font: UIFont.preferredFont(forTextStyle: .headline),
                 .foregroundColor: #colorLiteral(red: 0.1411764771, green: 0.3960784376, blue: 0.5647059083, alpha: 1)
                 ])
@@ -59,9 +60,9 @@ class WatchVideoViewController: UIViewController, WKUIDelegate {
             
             // init paragraph styles
             let paragraphStyle = NSMutableParagraphStyle()
-            paragraphStyle.headIndent = 0
-            paragraphStyle.firstLineHeadIndent = 0
-            paragraphStyle.tailIndent = 0
+            paragraphStyle.headIndent = 8
+            paragraphStyle.firstLineHeadIndent = 8
+            paragraphStyle.tailIndent = -8
             paragraphStyle.lineBreakMode = .byWordWrapping
             paragraphStyle.alignment = .left
             paragraphStyle.paragraphSpacing = 0.5 * UIFont.preferredFont(forTextStyle: .body).lineHeight
