@@ -14,11 +14,14 @@ class NetworkingService {
     static let shared = NetworkingService()
     private init() {}
     
-    let session = URLSession.shared
+    let config = URLSessionConfiguration.default
     
-    func getVideos(success: @escaping ([Video]) -> Void) {
-        guard let url = URL(string: "https://drexel.edu/~/media/Files/biomed/videos-v18.json") else { return }
+    func getVideos(urlString: String, success: @escaping ([Video]) -> Void) {
+        guard let url = URL(string: urlString) else { return }
         let request = URLRequest(url: url)
+        config.requestCachePolicy = .reloadIgnoringLocalCacheData
+        config.urlCache = nil
+        let session = URLSession.init(configuration: config)
         
         session.dataTask(with: request) { (data, _, _) in
             guard let data = data else { return }
@@ -36,6 +39,7 @@ class NetworkingService {
     
     func downloadImage(fromLink url: String, success: @escaping (UIImage) -> Void) {
         guard let url = URL(string: url) else { return }
+        let session = URLSession.init(configuration: config)
         session.dataTask(with: url) { (data, _, _) in
             guard let data = data,
                 let image = UIImage(data: data)

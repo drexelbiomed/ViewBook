@@ -16,10 +16,10 @@ class VideoTableViewController: UIViewController, UITableViewDataSource, UITable
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        NetworkingService.shared.getVideos { (videos) in
+        NetworkingService.shared.getVideos(urlString: "https://drexel.edu/~/media/Files/biomed/videos.json", success: { (videos) in
             self.videos = VideoCollection(videos: videos).videosByCategory()
             self.tableView.reloadData()
-        }
+        })
         self.tableView.register(CustomTableViewHeader.self, forHeaderFooterViewReuseIdentifier: CustomTableViewHeader.reuseIdentifer)
         self.tableView.estimatedSectionHeaderHeight = 108.0
         self.tableView.sectionHeaderHeight = UITableView.automaticDimension
