@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="XJm-lX-IGR">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Academics-->
+        <scene sceneID="UcW-oE-zdb">
+            <objects>
+                <viewController title="Academics" id="FPW-xz-jRO" customClass="AcademicsTableViewController" customModule="ViewBook" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="IXQ-p5-K8Z">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="551"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="uWs-UD-IBd">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="551"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="cell" rowHeight="200" id="mEz-gC-3a8" customClass="AcademicsCell" customModule="ViewBook" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="28" width="375" height="200"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="mEz-gC-3a8" id="NJw-kM-RGR">
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="199.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" scrollEnabled="NO" editable="NO" usesAttributedText="YES" translatesAutoresizingMaskIntoConstraints="NO" id="jWf-yp-RFd">
+                                                    <rect key="frame" x="8" y="9" width="398" height="190.5"/>
+                                                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    <attributedString key="attributedText">
+                                                        <fragment>
+                                                            <string key="content">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
+                                                            <attributes>
+                                                                <font key="NSFont" metaFont="system" size="14"/>
+                                                            </attributes>
+                                                        </fragment>
+                                                    </attributedString>
+                                                    <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                                    <dataDetectorType key="dataDetectorTypes" link="YES"/>
+                                                </textView>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="jWf-yp-RFd" firstAttribute="top" secondItem="NJw-kM-RGR" secondAttribute="top" constant="9" id="5cf-M5-ruQ"/>
+                                                <constraint firstItem="jWf-yp-RFd" firstAttribute="leading" secondItem="NJw-kM-RGR" secondAttribute="leading" constant="8" id="T95-cR-B0l"/>
+                                                <constraint firstAttribute="trailing" secondItem="jWf-yp-RFd" secondAttribute="trailing" constant="8" id="WVF-j8-nl4"/>
+                                                <constraint firstAttribute="bottom" secondItem="jWf-yp-RFd" secondAttribute="bottom" id="kxe-B7-eE2"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="textView" destination="jWf-yp-RFd" id="qZg-gA-6P5"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </prototypes>
+                                <connections>
+                                    <outlet property="dataSource" destination="FPW-xz-jRO" id="Abw-PF-YfM"/>
+                                    <outlet property="delegate" destination="FPW-xz-jRO" id="vAe-zJ-6rN"/>
+                                </connections>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="iMj-IK-1CP" firstAttribute="bottom" secondItem="uWs-UD-IBd" secondAttribute="bottom" id="3pb-Sq-oLz"/>
+                            <constraint firstItem="uWs-UD-IBd" firstAttribute="leading" secondItem="iMj-IK-1CP" secondAttribute="leading" id="4oP-jM-VeK"/>
+                            <constraint firstItem="iMj-IK-1CP" firstAttribute="trailing" secondItem="uWs-UD-IBd" secondAttribute="trailing" id="VaS-vG-oEp"/>
+                            <constraint firstItem="uWs-UD-IBd" firstAttribute="top" secondItem="iMj-IK-1CP" secondAttribute="top" id="hzA-eW-aEE"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="iMj-IK-1CP"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Academics" id="R33-LE-Fgw">
+                        <segmentedControl key="titleView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" segmentControlStyle="bar" selectedSegmentIndex="0" id="G6t-7e-VTN">
+                            <rect key="frame" x="19.5" y="7.5" width="336" height="29"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <color key="backgroundColor" red="0.039215687659999998" green="0.16862745579999999" blue="0.32941177490000001" alpha="1" colorSpace="calibratedRGB"/>
+                            <segments>
+                                <segment title="Undergraduate"/>
+                                <segment title="Graduate"/>
+                                <segment title="Certificate"/>
+                            </segments>
+                            <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        </segmentedControl>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="segmentedControl" destination="G6t-7e-VTN" id="YTJ-WI-O5g"/>
+                        <outlet property="tableView" destination="uWs-UD-IBd" id="InL-mz-Jjc"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="oor-Y3-H7p" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1221.7391304347827" y="971.73913043478274"/>
+        </scene>
+        <!--Academics-->
+        <scene sceneID="N5H-Mv-Ppq">
+            <objects>
+                <navigationController storyboardIdentifier="AcademicsNavigationController" automaticallyAdjustsScrollViewInsets="NO" id="XJm-lX-IGR" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Academics" image="book" id="dI6-iJ-9Gx"/>
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" translucent="NO" largeTitles="YES" id="dEh-V4-owg">
+                        <rect key="frame" x="0.0" y="20" width="375" height="96"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="barTintColor" red="0.039215687659999998" green="0.16862745579999999" blue="0.32941177490000001" alpha="1" colorSpace="calibratedRGB"/>
+                        <textAttributes key="titleTextAttributes">
+                            <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        </textAttributes>
+                        <textAttributes key="largeTitleTextAttributes">
+                            <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        </textAttributes>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="FPW-xz-jRO" kind="relationship" relationship="rootViewController" id="L4d-e7-G2B"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="EtF-Ym-IyH" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="464" y="972"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="book" width="30" height="30"/>
+    </resources>
+</document>
