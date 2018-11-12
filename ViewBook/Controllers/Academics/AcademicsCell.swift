@@ -32,7 +32,7 @@ class AcademicsCell: UITableViewCell {
             .font: UIFont.preferredFont(forTextStyle: .headline),
             .foregroundColor: #colorLiteral(red: 0.1411764771, green: 0.3960784376, blue: 0.5647059083, alpha: 1)
             ])
-        linkAttrString.addAttribute(.link, value: program.link, range: NSMakeRange(0, linkAttrString.length))
+        linkAttrString.addAttribute(.link, value: program.link + URLConstants.ga, range: NSMakeRange(0, linkAttrString.length))
         
         let attrStringArray = [headlineAttrString, summaryAttrString, linkAttrString]
         

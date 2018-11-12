@@ -22,7 +22,7 @@ class AboutTableViewController: UIViewController, UITableViewDataSource, UITable
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        urlString = "https://drexel.edu/biomed/resources/faculty-and-staff/about"
+        urlString = URLConstants.about
         priorities = ["visit", "contact", "message", "facts", "feedback"]
         ignore = ["director", "thank you"]
         Spinner.start(style: .whiteLarge, background: #colorLiteral(red: 1, green: 1, blue: 1, alpha: 0.2), foreground: #colorLiteral(red: 0, green: 0.3796961904, blue: 0.6040052772, alpha: 1))

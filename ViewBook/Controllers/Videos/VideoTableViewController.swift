@@ -16,7 +16,7 @@ class VideoTableViewController: UIViewController, UITableViewDataSource, UITable
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        NetworkingService.shared.getVideos(urlString: "https://drexel.edu/~/media/Files/biomed/videos.json", success: { (videos) in
+        NetworkingService.shared.getVideos(urlString: URLConstants.videos, success: { (videos) in
             self.videos = VideoCollection(videos: videos).videosByCategory()
             self.tableView.reloadData()
         })
@@ -137,8 +137,6 @@ class VideoTableViewController: UIViewController, UITableViewDataSource, UITable
     }
     
     private func setupNavUI() {
-        NavBarConstants.init()
-        
         // Initial setup for image for Large NavBar state since the the screen always has Large NavBar once it gets opened
         guard let navigationBar = self.navigationController?.navigationBar else { return }
         navigationBar.addSubview(dragonImageView)

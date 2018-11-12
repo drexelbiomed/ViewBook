@@ -35,6 +35,7 @@
 		5569337C20FD2AE4005B2AD7 /* Video.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5569337B20FD2AE4005B2AD7 /* Video.swift */; };
 		5569337E20FD2BF9005B2AD7 /* MyError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5569337D20FD2BF9005B2AD7 /* MyError.swift */; };
 		557D7F0A2107D76900649A4F /* ImageCache.swift in Sources */ = {isa = PBXBuildFile; fileRef = 557D7F092107D76900649A4F /* ImageCache.swift */; };
+		558CE8A72199D63700C49397 /* URLConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 558CE8A62199D63700C49397 /* URLConstants.swift */; };
 		559F027321482F47000EE8BA /* CustomTableViewHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 559F027221482F47000EE8BA /* CustomTableViewHeader.swift */; };
 		559F027521497FAD000EE8BA /* NewsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 559F027421497FAD000EE8BA /* NewsTableViewController.swift */; };
 		559F027B2149833E000EE8BA /* NewsModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 559F027A2149833E000EE8BA /* NewsModel.swift */; };
@@ -72,6 +73,7 @@
 		5569337B20FD2AE4005B2AD7 /* Video.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Video.swift; sourceTree = "<group>"; };
 		5569337D20FD2BF9005B2AD7 /* MyError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyError.swift; sourceTree = "<group>"; };
 		557D7F092107D76900649A4F /* ImageCache.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageCache.swift; sourceTree = "<group>"; };
+		558CE8A62199D63700C49397 /* URLConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URLConstants.swift; sourceTree = "<group>"; };
 		559F027221482F47000EE8BA /* CustomTableViewHeader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTableViewHeader.swift; sourceTree = "<group>"; };
 		559F027421497FAD000EE8BA /* NewsTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsTableViewController.swift; sourceTree = "<group>"; };
 		559F027A2149833E000EE8BA /* NewsModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NewsModel.swift; sourceTree = "<group>"; };
@@ -104,6 +106,7 @@
 			children = (
 				554912E120FCFD8700253C55 /* ViewBook */,
 				554912E020FCFD8700253C55 /* Products */,
+				55A166C32194CFC200940DEA /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -210,12 +213,20 @@
 				554912E220FCFD8700253C55 /* AppDelegate.swift */,
 				557D7F092107D76900649A4F /* ImageCache.swift */,
 				552B95AF216F92430048BBE3 /* NavBarConstants.swift */,
+				558CE8A62199D63700C49397 /* URLConstants.swift */,
 				554912FA20FD1CDC00253C55 /* NetworkingService.swift */,
 				5569337D20FD2BF9005B2AD7 /* MyError.swift */,
 				5508DD412167C66300EFB05E /* Spinner.swift */,
 				552B9599216E56960048BBE3 /* StringMethods.swift */,
 			);
 			path = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		55A166C32194CFC200940DEA /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -251,6 +262,17 @@
 					554912DE20FCFD8700253C55 = {
 						CreatedOnToolsVersion = 9.4.1;
 						LastSwiftMigration = 1000;
+						SystemCapabilities = {
+							com.apple.Maps.iOS = {
+								enabled = 0;
+							};
+							com.apple.Push = {
+								enabled = 0;
+							};
+							com.apple.iCloud = {
+								enabled = 0;
+							};
+						};
 					};
 				};
 			};
@@ -317,6 +339,7 @@
 				554912E320FCFD8700253C55 /* AppDelegate.swift in Sources */,
 				5526C896214302FC0036ADF7 /* VideoTableViewController.swift in Sources */,
 				5526C890214181C00036ADF7 /* VideoCollection.swift in Sources */,
+				558CE8A72199D63700C49397 /* URLConstants.swift in Sources */,
 				5569337C20FD2AE4005B2AD7 /* Video.swift in Sources */,
 				559F027321482F47000EE8BA /* CustomTableViewHeader.swift in Sources */,
 			);
@@ -479,13 +502,13 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = FZZ258L7BU;
+				DEVELOPMENT_TEAM = JA5LN72D3Y;
 				INFOPLIST_FILE = ViewBook/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = edu.drexel.biomed.ViewBook;
+				PRODUCT_BUNDLE_IDENTIFIER = edu.drexel.biomed.app;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -497,13 +520,13 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = FZZ258L7BU;
+				DEVELOPMENT_TEAM = JA5LN72D3Y;
 				INFOPLIST_FILE = ViewBook/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = edu.drexel.biomed.ViewBook;
+				PRODUCT_BUNDLE_IDENTIFIER = edu.drexel.biomed.app;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";

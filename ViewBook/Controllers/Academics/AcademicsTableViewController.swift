@@ -20,7 +20,7 @@ class AcademicsTableViewController: UIViewController, UITableViewDataSource, UIT
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        urlString = "https://drexel.edu/biomed/resources/faculty-and-staff/undergraduate-programs"
+        urlString = URLConstants.academics.undergraduate
         priorities = ["bachelor", "degree", "co-ops", "co-op", "design"]
 
         segmentedControl.addTarget(self, action: #selector(AcademicsTableViewController.segmentedControlValueChanged), for: UIControl.Event.valueChanged)
@@ -125,13 +125,13 @@ class AcademicsTableViewController: UIViewController, UITableViewDataSource, UIT
         Spinner.start(style: .whiteLarge, background: #colorLiteral(red: 1, green: 1, blue: 1, alpha: 0.3279599472), foreground: #colorLiteral(red: 0, green: 0.3796961904, blue: 0.6040052772, alpha: 1))
 
         if segment.selectedSegmentIndex == 0 {
-            urlString = "https://drexel.edu/biomed/resources/faculty-and-staff/undergraduate-programs"
+            urlString = URLConstants.academics.undergraduate
             priorities = ["bachelor", "degree", "co-ops", "co-op", "design"]
         } else if segment.selectedSegmentIndex == 1 {
-            urlString = "https://drexel.edu/biomed/resources/faculty-and-staff/graduate-programs"
+            urlString = URLConstants.academics.graduate
             priorities = ["master of science (ms) in biomedical", "business", "phd", "international", "minor"]
         } else {
-            urlString = "https://drexel.edu/biomed/resources/faculty-and-staff/certificate-programs"
+            urlString = URLConstants.academics.certificate
             priorities = ["tissue", "bioinformatics"]
         }
 

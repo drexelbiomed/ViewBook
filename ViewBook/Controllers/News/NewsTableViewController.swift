@@ -20,7 +20,7 @@ class NewsTableViewController: UIViewController, UITableViewDataSource, UITableV
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        urlString = "https://drexel.edu/biomed/news"
+        urlString = URLConstants.news.biomed
         
         segmentedControl.addTarget(self, action: #selector(NewsTableViewController.segmentedControlValueChanged), for: UIControl.Event.valueChanged)
 
@@ -178,11 +178,11 @@ class NewsTableViewController: UIViewController, UITableViewDataSource, UITableV
         Spinner.start(style: .whiteLarge, background: #colorLiteral(red: 1, green: 1, blue: 1, alpha: 0.3279599472), foreground: #colorLiteral(red: 0, green: 0.3796961904, blue: 0.6040052772, alpha: 1))
         
         if segment.selectedSegmentIndex == 0 {
-            urlString = "https://drexel.edu/biomed/news"
+            urlString = URLConstants.news.biomed
         } else if segment.selectedSegmentIndex == 1 {
-            urlString = "https://drexel.edu/now/biomed-news"
+            urlString = URLConstants.news.now
         } else {
-            urlString = "https://newsblog.drexel.edu/tag/school-of-biomedical-engineering-science-and-health-systems/feed/"
+            urlString = URLConstants.news.newsblog
         }
         beginParsing(urlString: urlString)
     }
