@@ -32,7 +32,7 @@ public struct URLConstants {
     
     public struct academics {
         static let undergraduate = "https://drexel.edu/biomed/resources/faculty-and-staff/undergraduate-programs"
-        static let graduate = "https://drexel.edu/biomed/resources/faculty-and-staff/undergraduate-programs"
+        static let graduate = "https://drexel.edu/biomed/resources/faculty-and-staff/graduate-programs"
         static let certificate = "https://drexel.edu/biomed/resources/faculty-and-staff/certificate-programs"
     }
 }
